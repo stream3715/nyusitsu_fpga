@@ -484,8 +484,11 @@ set_location_assignment PIN_AG9 -to SENSOR[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SENSOR[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SENSOR[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SENSOR
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_I2C[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_I2C[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_I2C[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_I2C[1]
+set_global_assignment -name VERILOG_FILE pwm.v
+set_location_assignment PIN_U14 -to SPEAKER
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SPEAKER
+set_location_assignment PIN_AH9 -to GPIO_I2C[0]
+set_location_assignment PIN_AG11 -to GPIO_I2C[1]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

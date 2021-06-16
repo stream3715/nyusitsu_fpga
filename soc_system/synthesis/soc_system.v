@@ -91,14 +91,14 @@ module soc_system (
 	wire   [31:0] nios2_cpu_data_master_readdata;                              // mm_interconnect_0:nios2_cpu_data_master_readdata -> nios2_cpu:d_readdata
 	wire          nios2_cpu_data_master_waitrequest;                           // mm_interconnect_0:nios2_cpu_data_master_waitrequest -> nios2_cpu:d_waitrequest
 	wire          nios2_cpu_data_master_debugaccess;                           // nios2_cpu:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:nios2_cpu_data_master_debugaccess
-	wire   [13:0] nios2_cpu_data_master_address;                               // nios2_cpu:d_address -> mm_interconnect_0:nios2_cpu_data_master_address
+	wire   [17:0] nios2_cpu_data_master_address;                               // nios2_cpu:d_address -> mm_interconnect_0:nios2_cpu_data_master_address
 	wire    [3:0] nios2_cpu_data_master_byteenable;                            // nios2_cpu:d_byteenable -> mm_interconnect_0:nios2_cpu_data_master_byteenable
 	wire          nios2_cpu_data_master_read;                                  // nios2_cpu:d_read -> mm_interconnect_0:nios2_cpu_data_master_read
 	wire          nios2_cpu_data_master_write;                                 // nios2_cpu:d_write -> mm_interconnect_0:nios2_cpu_data_master_write
 	wire   [31:0] nios2_cpu_data_master_writedata;                             // nios2_cpu:d_writedata -> mm_interconnect_0:nios2_cpu_data_master_writedata
 	wire   [31:0] nios2_cpu_instruction_master_readdata;                       // mm_interconnect_0:nios2_cpu_instruction_master_readdata -> nios2_cpu:i_readdata
 	wire          nios2_cpu_instruction_master_waitrequest;                    // mm_interconnect_0:nios2_cpu_instruction_master_waitrequest -> nios2_cpu:i_waitrequest
-	wire   [13:0] nios2_cpu_instruction_master_address;                        // nios2_cpu:i_address -> mm_interconnect_0:nios2_cpu_instruction_master_address
+	wire   [17:0] nios2_cpu_instruction_master_address;                        // nios2_cpu:i_address -> mm_interconnect_0:nios2_cpu_instruction_master_address
 	wire          nios2_cpu_instruction_master_read;                           // nios2_cpu:i_read -> mm_interconnect_0:nios2_cpu_instruction_master_read
 	wire          mm_interconnect_0_jtag_uart_1_avalon_jtag_slave_chipselect;  // mm_interconnect_0:jtag_uart_1_avalon_jtag_slave_chipselect -> jtag_uart_1:av_chipselect
 	wire   [31:0] mm_interconnect_0_jtag_uart_1_avalon_jtag_slave_readdata;    // jtag_uart_1:av_readdata -> mm_interconnect_0:jtag_uart_1_avalon_jtag_slave_readdata
@@ -122,7 +122,7 @@ module soc_system (
 	wire   [31:0] mm_interconnect_0_nios2_cpu_debug_mem_slave_writedata;       // mm_interconnect_0:nios2_cpu_debug_mem_slave_writedata -> nios2_cpu:debug_mem_slave_writedata
 	wire          mm_interconnect_0_onchip_memory_s1_chipselect;               // mm_interconnect_0:onchip_memory_s1_chipselect -> onchip_memory:chipselect
 	wire   [31:0] mm_interconnect_0_onchip_memory_s1_readdata;                 // onchip_memory:readdata -> mm_interconnect_0:onchip_memory_s1_readdata
-	wire    [9:0] mm_interconnect_0_onchip_memory_s1_address;                  // mm_interconnect_0:onchip_memory_s1_address -> onchip_memory:address
+	wire   [13:0] mm_interconnect_0_onchip_memory_s1_address;                  // mm_interconnect_0:onchip_memory_s1_address -> onchip_memory:address
 	wire    [3:0] mm_interconnect_0_onchip_memory_s1_byteenable;               // mm_interconnect_0:onchip_memory_s1_byteenable -> onchip_memory:byteenable
 	wire          mm_interconnect_0_onchip_memory_s1_write;                    // mm_interconnect_0:onchip_memory_s1_write -> onchip_memory:write
 	wire   [31:0] mm_interconnect_0_onchip_memory_s1_writedata;                // mm_interconnect_0:onchip_memory_s1_writedata -> onchip_memory:writedata

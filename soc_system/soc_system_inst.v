@@ -55,6 +55,11 @@
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO53    (<connected-to-hps_0_hps_io_hps_io_gpio_inst_GPIO53>),    //                                 .hps_io_gpio_inst_GPIO53
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO54    (<connected-to-hps_0_hps_io_hps_io_gpio_inst_GPIO54>),    //                                 .hps_io_gpio_inst_GPIO54
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO61    (<connected-to-hps_0_hps_io_hps_io_gpio_inst_GPIO61>),    //                                 .hps_io_gpio_inst_GPIO61
+		.i2c_0_i2c_serial_sda_in                 (<connected-to-i2c_0_i2c_serial_sda_in>),                 //                 i2c_0_i2c_serial.sda_in
+		.i2c_0_i2c_serial_scl_in                 (<connected-to-i2c_0_i2c_serial_scl_in>),                 //                                 .scl_in
+		.i2c_0_i2c_serial_sda_oe                 (<connected-to-i2c_0_i2c_serial_sda_oe>),                 //                                 .sda_oe
+		.i2c_0_i2c_serial_scl_oe                 (<connected-to-i2c_0_i2c_serial_scl_oe>),                 //                                 .scl_oe
+		.led_pio_export                          (<connected-to-led_pio_export>),                          //                          led_pio.export
 		.memory_mem_a                            (<connected-to-memory_mem_a>),                            //                           memory.mem_a
 		.memory_mem_ba                           (<connected-to-memory_mem_ba>),                           //                                 .mem_ba
 		.memory_mem_ck                           (<connected-to-memory_mem_ck>),                           //                                 .mem_ck
@@ -73,13 +78,8 @@
 		.memory_oct_rzqin                        (<connected-to-memory_oct_rzqin>),                        //                                 .oct_rzqin
 		.mypio_0_conduit_end_amount              (<connected-to-mypio_0_conduit_end_amount>),              //              mypio_0_conduit_end.amount
 		.mypio_0_conduit_end_soundenable         (<connected-to-mypio_0_conduit_end_soundenable>),         //                                 .soundenable
+		.nios_cpu_pio_external_connection_export (<connected-to-nios_cpu_pio_external_connection_export>), // nios_cpu_pio_external_connection.export
 		.reset_reset_n                           (<connected-to-reset_reset_n>),                           //                            reset.reset_n
-		.sensor_pio_external_connection_export   (<connected-to-sensor_pio_external_connection_export>),   //   sensor_pio_external_connection.export
-		.led_pio_export                          (<connected-to-led_pio_export>),                          //                          led_pio.export
-		.i2c_0_i2c_serial_sda_in                 (<connected-to-i2c_0_i2c_serial_sda_in>),                 //                 i2c_0_i2c_serial.sda_in
-		.i2c_0_i2c_serial_scl_in                 (<connected-to-i2c_0_i2c_serial_scl_in>),                 //                                 .scl_in
-		.i2c_0_i2c_serial_sda_oe                 (<connected-to-i2c_0_i2c_serial_sda_oe>),                 //                                 .sda_oe
-		.i2c_0_i2c_serial_scl_oe                 (<connected-to-i2c_0_i2c_serial_scl_oe>),                 //                                 .scl_oe
-		.nios_cpu_pio_external_connection_export (<connected-to-nios_cpu_pio_external_connection_export>)  // nios_cpu_pio_external_connection.export
+		.sensor_pio_external_connection_export   (<connected-to-sensor_pio_external_connection_export>)    //   sensor_pio_external_connection.export
 	);
 

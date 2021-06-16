@@ -39,7 +39,7 @@
  --                  Bank 7B:  3.3V
  --                  Bank 7C:  3.3V
  --                  Bank 7D:  3.3V
- --                  Bank 8A:  2.5V
+ --                  Bank 8A:  3.3V
  --                  Bank 9A:  Dedicated configuration pins only, no VCCIO required.
  -- RREF          : External reference resistor for the quad, MUST be connected to
  --                 GND via a 2k Ohm resistor.
@@ -116,7 +116,7 @@ GND                          : AA9       : gnd    :                   :         
 VCCPD3A                      : AA10      : power  :                   : 3.3V    : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA11      :        :                   :         : 3A        :                
 VCCIO3B                      : AA12      : power  :                   : 3.3V    : 3B        :                
-GPIO_I2C[0]                  : AA13      : input  : 3.3-V LVTTL       :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 4A        :                
 VCCPD3B4A                    : AA14      : power  :                   : 3.3V    : 3B, 4A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 4A        :                
 VCCIO4A                      : AA16      : power  :                   : 3.3V    : 4A        :                
@@ -253,7 +253,7 @@ GND                          : AG7       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG8       :        :                   :         : 4A        :                
 SENSOR[0]                    : AG9       : input  : 3.3-V LVTTL       :         : 4A        : Y              
 SENSOR[1]                    : AG10      : input  : 3.3-V LVTTL       :         : 4A        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG11      :        :                   :         : 4A        :                
+GPIO_I2C[1]                  : AG11      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
 VCCIO4A                      : AG12      : power  :                   : 3.3V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG13      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG14      :        :                   :         : 4A        :                
@@ -278,7 +278,7 @@ HDMI_TX_D[19]                : AH5       : output : 3.3-V LVTTL       :         
 HDMI_TX_D[20]                : AH6       : output : 3.3-V LVTTL       :         : 3B        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH7       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH8       :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH9       :        :                   :         : 4A        :                
+GPIO_I2C[0]                  : AH9       : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
 GND                          : AH10      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH11      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH12      :        :                   :         : 4A        :                
@@ -336,7 +336,7 @@ HPS_USB_DATA[4]              : C8        : bidir  : 3.3-V LVTTL       :         
 HPS_USB_DATA[2]              : C9        : bidir  : 3.3-V LVTTL       :         : 7D        : Y              
 HPS_USB_DATA[0]              : C10       : bidir  : 3.3-V LVTTL       :         : 7D        : Y              
 GND                          : C11       : gnd    :                   :         :           :                
-SPEAKER                      : C12       : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C12       :        :                   :         : 8A        :                
 HPS_SD_DATA[0]               : C13       : bidir  : 3.3-V LVTTL       :         : 7C        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7B        :                
 HPS_ENET_RX_DATA[2]          : C15       : input  : 3.3-V LVTTL       :         : 7B        : Y              
@@ -387,10 +387,10 @@ GND                          : E3        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 7D        :                
 HPS_USB_DIR                  : E5        : input  : 3.3-V LVTTL       :         : 7D        : Y              
 nCE                          : E6        :        :                   :         : 9A        :                
-VCCIO8A                      : E7        : power  :                   : 2.5V    : 8A        :                
+VCCIO8A                      : E7        : power  :                   : 3.3V    : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8A        :                
 GND                          : E9        : gnd    :                   :         :           :                
-VCCPD8A                      : E10       : power  :                   : 2.5V    : 8A        :                
+VCCPD8A                      : E10       : power  :                   : 3.3V    : 8A        :                
 FPGA_CLK3_50                 : E11       : input  : 3.3-V LVTTL       :         : 8A        : Y              
 DNU                          : E12       :        :                   :         :           :                
 VCCPD7D_HPS                  : E13       : power  :                   : 3.3V    : 7D        :                
@@ -666,7 +666,7 @@ HDMI_I2C_SCL                 : U10       : bidir  : 3.3-V LVTTL       :         
 HDMI_MCLK                    : U11       : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
 GND                          : U12       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U13       :        :                   :         : 4A        :                
-GPIO_I2C[1]                  : U14       : input  : 3.3-V LVTTL       :         : 4A        : N              
+SPEAKER                      : U14       : output : 3.3-V LVTTL       :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U15       :        :                   :         : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U16       :        :                   :         : 6B        :                
 GND                          : U17       : gnd    :                   :         :           :                

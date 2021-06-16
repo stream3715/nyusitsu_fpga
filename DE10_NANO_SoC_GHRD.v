@@ -87,7 +87,7 @@ module DE10_NANO_SoC_GHRD(
 	 input    [ 1: 0]    SENSOR,
 	 
 	 //////////   I2C  /////////
-	 input    [ 1: 0]    GPIO_I2C,
+	 inout    [ 1: 0]    GPIO_I2C,
 	 
 	 ////////  Speaker  ////////
 	 output             SPEAKER
@@ -196,16 +196,16 @@ soc_system u0(
                .hps_0_hps_io_hps_io_gpio_inst_GPIO61(HPS_GSENSOR_INT),      //                               .hps_io_gpio_inst_GPIO61
                //FPGA Partion
 					
+               //.mypio_0_conduit_end_amount(),      //    led_pio_external_connection.export
+					.mypio_0_conduit_end_soundenable(soundEnable),
 					/*
-               .mypio_0_conduit_end_amount(LED),      //    led_pio_external_connection.export
-					.mypio_0_conduit_end_soundenable()
 					.i2c_0_i2c_serial_sda_in(GPIO_I2C[0]),
 					.i2c_0_i2c_serial_scl_in(GPIO_I2C[1]),
 					.i2c_0_i2c_serial_sda_oe(GPIO_I2C[2]),
 					.i2c_0_i2c_serial_scl_oe(GPIO_I2C[3]),
 					*/
 //					
-               .sensor_pio_external_connection_export(SENSOR), 
+               // .sensor_pio_external_connection_export(SENSOR), 
                .dipsw_pio_external_connection_export(SW),                   //  dipsw_pio_external_connection.export
                .button_pio_external_connection_export(fpga_debounced_buttons),
                                                                             // button_pio_external_connection.export
@@ -265,22 +265,10 @@ defparam pulse_debug_reset.PULSE_EXT = 32;
 defparam pulse_debug_reset.EDGE_TYPE = 1;
 defparam pulse_debug_reset.IGNORE_RST_WHILE_BUSY = 1;
 
-reg [25: 0] counter;
-reg led_level;
-always @(posedge fpga_clk_50 or negedge hps_fpga_reset_n) begin
-    if (~hps_fpga_reset_n) begin
-        counter <= 0;
-        led_level <= 0;
-    end
+wire soundEnable;
 
-    else if (counter == 24999999) begin
-        counter <= 0;
-        led_level <= ~led_level;
-    end
-    else
-        counter <= counter + 1'b1;
-end
+pwm pwm(pout, fpga_clk_50, nreset, soundEnable);
 
-
+assign LED[1:0] = SENSOR;
 
 endmodule

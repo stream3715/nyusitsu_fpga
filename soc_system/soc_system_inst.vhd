@@ -56,6 +56,11 @@
 			hps_0_hps_io_hps_io_gpio_inst_GPIO53    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
 			hps_0_hps_io_hps_io_gpio_inst_GPIO54    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
 			hps_0_hps_io_hps_io_gpio_inst_GPIO61    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO61
+			i2c_0_i2c_serial_sda_in                 : in    std_logic                     := 'X';             -- sda_in
+			i2c_0_i2c_serial_scl_in                 : in    std_logic                     := 'X';             -- scl_in
+			i2c_0_i2c_serial_sda_oe                 : out   std_logic;                                        -- sda_oe
+			i2c_0_i2c_serial_scl_oe                 : out   std_logic;                                        -- scl_oe
+			led_pio_export                          : out   std_logic_vector(7 downto 0);                     -- export
 			memory_mem_a                            : out   std_logic_vector(14 downto 0);                    -- mem_a
 			memory_mem_ba                           : out   std_logic_vector(2 downto 0);                     -- mem_ba
 			memory_mem_ck                           : out   std_logic;                                        -- mem_ck
@@ -74,14 +79,9 @@
 			memory_oct_rzqin                        : in    std_logic                     := 'X';             -- oct_rzqin
 			mypio_0_conduit_end_amount              : out   std_logic_vector(7 downto 0);                     -- amount
 			mypio_0_conduit_end_soundenable         : out   std_logic;                                        -- soundenable
+			nios_cpu_pio_external_connection_export : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
 			reset_reset_n                           : in    std_logic                     := 'X';             -- reset_n
-			sensor_pio_external_connection_export   : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
-			led_pio_export                          : out   std_logic_vector(7 downto 0);                     -- export
-			i2c_0_i2c_serial_sda_in                 : in    std_logic                     := 'X';             -- sda_in
-			i2c_0_i2c_serial_scl_in                 : in    std_logic                     := 'X';             -- scl_in
-			i2c_0_i2c_serial_sda_oe                 : out   std_logic;                                        -- sda_oe
-			i2c_0_i2c_serial_scl_oe                 : out   std_logic;                                        -- scl_oe
-			nios_cpu_pio_external_connection_export : in    std_logic_vector(7 downto 0)  := (others => 'X')  -- export
+			sensor_pio_external_connection_export   : in    std_logic_vector(1 downto 0)  := (others => 'X')  -- export
 		);
 	end component soc_system;
 
@@ -143,6 +143,11 @@
 			hps_0_hps_io_hps_io_gpio_inst_GPIO53    => CONNECTED_TO_hps_0_hps_io_hps_io_gpio_inst_GPIO53,    --                                 .hps_io_gpio_inst_GPIO53
 			hps_0_hps_io_hps_io_gpio_inst_GPIO54    => CONNECTED_TO_hps_0_hps_io_hps_io_gpio_inst_GPIO54,    --                                 .hps_io_gpio_inst_GPIO54
 			hps_0_hps_io_hps_io_gpio_inst_GPIO61    => CONNECTED_TO_hps_0_hps_io_hps_io_gpio_inst_GPIO61,    --                                 .hps_io_gpio_inst_GPIO61
+			i2c_0_i2c_serial_sda_in                 => CONNECTED_TO_i2c_0_i2c_serial_sda_in,                 --                 i2c_0_i2c_serial.sda_in
+			i2c_0_i2c_serial_scl_in                 => CONNECTED_TO_i2c_0_i2c_serial_scl_in,                 --                                 .scl_in
+			i2c_0_i2c_serial_sda_oe                 => CONNECTED_TO_i2c_0_i2c_serial_sda_oe,                 --                                 .sda_oe
+			i2c_0_i2c_serial_scl_oe                 => CONNECTED_TO_i2c_0_i2c_serial_scl_oe,                 --                                 .scl_oe
+			led_pio_export                          => CONNECTED_TO_led_pio_export,                          --                          led_pio.export
 			memory_mem_a                            => CONNECTED_TO_memory_mem_a,                            --                           memory.mem_a
 			memory_mem_ba                           => CONNECTED_TO_memory_mem_ba,                           --                                 .mem_ba
 			memory_mem_ck                           => CONNECTED_TO_memory_mem_ck,                           --                                 .mem_ck
@@ -161,13 +166,8 @@
 			memory_oct_rzqin                        => CONNECTED_TO_memory_oct_rzqin,                        --                                 .oct_rzqin
 			mypio_0_conduit_end_amount              => CONNECTED_TO_mypio_0_conduit_end_amount,              --              mypio_0_conduit_end.amount
 			mypio_0_conduit_end_soundenable         => CONNECTED_TO_mypio_0_conduit_end_soundenable,         --                                 .soundenable
+			nios_cpu_pio_external_connection_export => CONNECTED_TO_nios_cpu_pio_external_connection_export, -- nios_cpu_pio_external_connection.export
 			reset_reset_n                           => CONNECTED_TO_reset_reset_n,                           --                            reset.reset_n
-			sensor_pio_external_connection_export   => CONNECTED_TO_sensor_pio_external_connection_export,   --   sensor_pio_external_connection.export
-			led_pio_export                          => CONNECTED_TO_led_pio_export,                          --                          led_pio.export
-			i2c_0_i2c_serial_sda_in                 => CONNECTED_TO_i2c_0_i2c_serial_sda_in,                 --                 i2c_0_i2c_serial.sda_in
-			i2c_0_i2c_serial_scl_in                 => CONNECTED_TO_i2c_0_i2c_serial_scl_in,                 --                                 .scl_in
-			i2c_0_i2c_serial_sda_oe                 => CONNECTED_TO_i2c_0_i2c_serial_sda_oe,                 --                                 .sda_oe
-			i2c_0_i2c_serial_scl_oe                 => CONNECTED_TO_i2c_0_i2c_serial_scl_oe,                 --                                 .scl_oe
-			nios_cpu_pio_external_connection_export => CONNECTED_TO_nios_cpu_pio_external_connection_export  -- nios_cpu_pio_external_connection.export
+			sensor_pio_external_connection_export   => CONNECTED_TO_sensor_pio_external_connection_export    --   sensor_pio_external_connection.export
 		);
 
