@@ -75,7 +75,13 @@ module soc_system (
 	mypio_0_conduit_end_amount,
 	mypio_0_conduit_end_soundenable,
 	reset_reset_n,
-	sensor_pio_external_connection_export);	
+	sensor_pio_external_connection_export,
+	led_pio_export,
+	i2c_0_i2c_serial_sda_in,
+	i2c_0_i2c_serial_scl_in,
+	i2c_0_i2c_serial_sda_oe,
+	i2c_0_i2c_serial_scl_oe,
+	nios_cpu_pio_external_connection_export);	
 
 	input	[1:0]	button_pio_external_connection_export;
 	input		clk_clk;
@@ -153,4 +159,10 @@ module soc_system (
 	output		mypio_0_conduit_end_soundenable;
 	input		reset_reset_n;
 	input	[1:0]	sensor_pio_external_connection_export;
+	output	[7:0]	led_pio_export;
+	input		i2c_0_i2c_serial_sda_in;
+	input		i2c_0_i2c_serial_scl_in;
+	output		i2c_0_i2c_serial_sda_oe;
+	output		i2c_0_i2c_serial_scl_oe;
+	input	[7:0]	nios_cpu_pio_external_connection_export;
 endmodule
