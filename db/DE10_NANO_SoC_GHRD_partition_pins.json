@@ -16,6 +16,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "SENSOR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SENSOR[1]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[0]",
 					"strict" : false
 				},
@@ -29,14 +37,6 @@
 				},
 				{
 					"name" : "SW[3]",
-					"strict" : false
-				},
-				{
-					"name" : "SENSOR[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SENSOR[1]",
 					"strict" : false
 				},
 				{
