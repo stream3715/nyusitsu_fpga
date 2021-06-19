@@ -205,7 +205,7 @@ soc_system u0(
 					.i2c_0_i2c_serial_scl_oe(GPIO_I2C[3]),
 					*/
 //					
-               // .sensor_pio_external_connection_export(SENSOR), 
+               .sensor_pio_external_connection_export(SENSOR), 
                .dipsw_pio_external_connection_export(SW),                   //  dipsw_pio_external_connection.export
                .button_pio_external_connection_export(fpga_debounced_buttons),
                                                                             // button_pio_external_connection.export
@@ -267,7 +267,7 @@ defparam pulse_debug_reset.IGNORE_RST_WHILE_BUSY = 1;
 
 wire soundEnable;
 
-pwm pwm(pout, fpga_clk_50, nreset, soundEnable);
+// pwm pwm(pout, fpga_clk_50, nreset, soundEnable);
 
 assign LED[1:0] = SENSOR;
 
