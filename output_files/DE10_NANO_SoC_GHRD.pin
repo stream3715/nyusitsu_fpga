@@ -253,7 +253,7 @@ GND                          : AG7       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG8       :        :                   :         : 4A        :                
 SENSOR[0]                    : AG9       : input  : 3.3-V LVTTL       :         : 4A        : Y              
 SENSOR[1]                    : AG10      : input  : 3.3-V LVTTL       :         : 4A        : Y              
-GPIO_I2C[1]                  : AG11      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+GPIO_SCL                     : AG11      : output : 3.3-V LVTTL       :         : 4A        : Y              
 VCCIO4A                      : AG12      : power  :                   : 3.3V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG13      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG14      :        :                   :         : 4A        :                
@@ -278,7 +278,7 @@ HDMI_TX_D[19]                : AH5       : output : 3.3-V LVTTL       :         
 HDMI_TX_D[20]                : AH6       : output : 3.3-V LVTTL       :         : 3B        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH7       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH8       :        :                   :         : 4A        :                
-GPIO_I2C[0]                  : AH9       : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+GPIO_SDA                     : AH9       : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
 GND                          : AH10      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH11      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH12      :        :                   :         : 4A        :                

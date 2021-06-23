@@ -56,11 +56,6 @@ module soc_system (
 	hps_0_hps_io_hps_io_gpio_inst_GPIO53,
 	hps_0_hps_io_hps_io_gpio_inst_GPIO54,
 	hps_0_hps_io_hps_io_gpio_inst_GPIO61,
-	i2c_0_i2c_serial_sda_in,
-	i2c_0_i2c_serial_scl_in,
-	i2c_0_i2c_serial_sda_oe,
-	i2c_0_i2c_serial_scl_oe,
-	led_pio_export,
 	memory_mem_a,
 	memory_mem_ba,
 	memory_mem_ck,
@@ -79,7 +74,6 @@ module soc_system (
 	memory_oct_rzqin,
 	mypio_0_conduit_end_amount,
 	mypio_0_conduit_end_soundenable,
-	nios_cpu_pio_external_connection_export,
 	reset_reset_n,
 	sensor_pio_external_connection_export);	
 
@@ -139,11 +133,6 @@ module soc_system (
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO53;
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO54;
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO61;
-	input		i2c_0_i2c_serial_sda_in;
-	input		i2c_0_i2c_serial_scl_in;
-	output		i2c_0_i2c_serial_sda_oe;
-	output		i2c_0_i2c_serial_scl_oe;
-	output	[7:0]	led_pio_export;
 	output	[14:0]	memory_mem_a;
 	output	[2:0]	memory_mem_ba;
 	output		memory_mem_ck;
@@ -162,7 +151,6 @@ module soc_system (
 	input		memory_oct_rzqin;
 	output	[7:0]	mypio_0_conduit_end_amount;
 	output		mypio_0_conduit_end_soundenable;
-	input	[7:0]	nios_cpu_pio_external_connection_export;
 	input		reset_reset_n;
 	input	[1:0]	sensor_pio_external_connection_export;
 endmodule

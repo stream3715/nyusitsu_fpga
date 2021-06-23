@@ -82,16 +82,17 @@ module DE10_NANO_SoC_GHRD(
 
     //////////// SW //////////
     input    [ 3: 0]    SW,
-	 
+
 	 ////////// Sensor /////////
 	 input    [ 1: 0]    SENSOR,
-	 
+
 	 //////////   I2C  /////////
-	 inout    [ 1: 0]    GPIO_I2C,
-	 
+     output              GPIO_SCL,
+	 inout               GPIO_SDA,
+
 	 ////////  Speaker  ////////
 	 output              SPEAKER
-	 
+
 );
 
 
@@ -195,17 +196,11 @@ soc_system u0(
                .hps_0_hps_io_hps_io_gpio_inst_GPIO54(HPS_KEY),              //                               .hps_io_gpio_inst_GPIO54
                .hps_0_hps_io_hps_io_gpio_inst_GPIO61(HPS_GSENSOR_INT),      //                               .hps_io_gpio_inst_GPIO61
                //FPGA Partion
-					
-               //.mypio_0_conduit_end_amount(),      //    led_pio_external_connection.export
-					.mypio_0_conduit_end_soundenable(soundEnable),
-					/*
-					.i2c_0_i2c_serial_sda_in(GPIO_I2C[0]),
-					.i2c_0_i2c_serial_scl_in(GPIO_I2C[1]),
-					.i2c_0_i2c_serial_sda_oe(GPIO_I2C[2]),
-					.i2c_0_i2c_serial_scl_oe(GPIO_I2C[3]),
-					*/
-//					
-               .sensor_pio_external_connection_export(SENSOR), 
+
+               .mypio_0_conduit_end_amount(amount),      //    led_pio_external_connection.export
+			   .mypio_0_conduit_end_soundenable(soundEnable),
+
+               .sensor_pio_external_connection_export(SENSOR),
                .dipsw_pio_external_connection_export(SW),                   //  dipsw_pio_external_connection.export
                .button_pio_external_connection_export(fpga_debounced_buttons),
                                                                             // button_pio_external_connection.export
@@ -270,33 +265,53 @@ wire soundEnable;
 pwm_module pwm(fpga_clk_50, KEY[1], SPEAKER);
 
 
+wire wr;
+wire [6:0]adr;
+wire [31:0]wr_data;
+wire [2:0]wr_bytes;
+wire [3:0]wr_be;
+wire    scl_drv;
 wire    sda_i;
 wire    sda_o;
+wire    busy;
 
-// IO driver      
-assign sda = (sda_o==1'b0)?1'b0:1'bz;
-assign sda_i = sda;
-assign scl = (scl_drv==1'b0)?1'b0:1'bz;
+wire [7:0]amount;
+wire [7:0]amountexpand;
+
+// IO driver
+assign GPIO_SDA = (sda_o==1'b0)?1'b0:1'bz;
+assign sda_i = GPIO_SDA;
+assign GPIO_SCL = (scl_drv==1'b0)?1'b0:1'bz;
+
+assign amountexpand[7:4] = {1'b0};
+assign amountexpand[3:0] = SW[3:0];
 
 i2c_m_if i2c_m_if(
   .clk(   fpga_clk_50),
   .rstb(  KEY[0]),
-  .scl(  GPIO_I2C[1]),
+  .scl(  scl_drv),
   .sda_o(  sda_o),
   .sda_i(  sda_i),
   .wr(    wr),
-  .rd(    rd),
   .adr(   adr),
   .wr_data(wr_data),
   .wr_bytes(wr_bytes),
-  .rd_data(rd_data),
-  .rd_data_en(rd_data_en),
-  .rd_bytes(rd_bytes),
-  .busy(busy) 
+  .busy(busy)
   );
 
-i2c_pcf_ctrl slave(fpga_clk_50, KEY[0], GPIO_I2C[1], GPIO_I2C[0], );
+i2c_pcf_ctrl slave(
+  .clk(   fpga_clk_50),
+  .rstb(  KEY[0]),
+  .led_0( LED[0]),
+  .wr(    wr),
+  .adr(   adr),
+  .wr_data(wr_data),
+  .wr_bytes(wr_bytes),
+  .busy(busy),
+  .amount(SW[3:0])
+);
 
-assign LED[1:0] = SENSOR;
+
+// assign LED[1:0] = SENSOR;
 
 endmodule

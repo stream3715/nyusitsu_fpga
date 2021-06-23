@@ -1,6 +1,6 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate /home/strea/iot/product/production/soc_system.qsys --block-symbol-file --output-directory=/home/strea/iot/product/production/soc_system --family="Cyclone V" --part=5CSEBA6U23I7
-Progress: Loading production/soc_system.qsys
+Info: qsys-generate D:\Users\strea\Desktop\nyusitsu_fpga\soc_system.qsys --block-symbol-file --output-directory=D:\Users\strea\Desktop\nyusitsu_fpga\soc_system --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading nyusitsu_fpga/soc_system.qsys
 Progress: Reading input file
 Progress: Adding ILC [interrupt_latency_counter 20.1]
 Progress: Parameterizing module ILC
@@ -20,22 +20,10 @@ Progress: Adding hps_0 [altera_hps 20.1]
 Progress: Parameterizing module hps_0
 Progress: Adding hps_only_master [altera_jtag_avalon_master 20.1]
 Progress: Parameterizing module hps_only_master
-Progress: Adding i2c_0 [altera_avalon_i2c 20.1]
-Progress: Parameterizing module i2c_0
 Progress: Adding jtag_uart [altera_avalon_jtag_uart 20.1]
 Progress: Parameterizing module jtag_uart
-Progress: Adding jtag_uart_1 [altera_avalon_jtag_uart 20.1]
-Progress: Parameterizing module jtag_uart_1
-Progress: Adding led_pio [altera_avalon_pio 20.1]
-Progress: Parameterizing module led_pio
 Progress: Adding mm_bridge_0 [altera_avalon_mm_bridge 20.1]
 Progress: Parameterizing module mm_bridge_0
-Progress: Adding nios2_cpu [altera_nios2_gen2 20.1]
-Progress: Parameterizing module nios2_cpu
-Progress: Adding nios_cpu_pio [altera_avalon_pio 20.1]
-Progress: Parameterizing module nios_cpu_pio
-Progress: Adding onchip_memory [altera_avalon_onchip_memory2 20.1]
-Progress: Parameterizing module onchip_memory
 Progress: Adding sensor_pio [altera_avalon_pio 20.1]
 Progress: Parameterizing module sensor_pio
 Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 20.1]
@@ -49,8 +37,6 @@ Info: soc_system.dipsw_pio: PIO inputs are not hardwired in test bench. Undefine
 Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 63
 Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
 Info: soc_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
-Info: soc_system.jtag_uart_1: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
-Info: soc_system.nios_cpu_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: soc_system.sensor_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: soc_system.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
 Info: soc_system.sysid_qsys: Time stamp will be automatically updated when this component is generated.
@@ -58,8 +44,8 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/strea/iot/product/production/soc_system.qsys --synthesis=VERILOG --output-directory=/home/strea/iot/product/production/soc_system/synthesis --family="Cyclone V" --part=5CSEBA6U23I7
-Progress: Loading production/soc_system.qsys
+Info: qsys-generate D:\Users\strea\Desktop\nyusitsu_fpga\soc_system.qsys --synthesis=VERILOG --output-directory=D:\Users\strea\Desktop\nyusitsu_fpga\soc_system\synthesis --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading nyusitsu_fpga/soc_system.qsys
 Progress: Reading input file
 Progress: Adding ILC [interrupt_latency_counter 20.1]
 Progress: Parameterizing module ILC
@@ -79,22 +65,10 @@ Progress: Adding hps_0 [altera_hps 20.1]
 Progress: Parameterizing module hps_0
 Progress: Adding hps_only_master [altera_jtag_avalon_master 20.1]
 Progress: Parameterizing module hps_only_master
-Progress: Adding i2c_0 [altera_avalon_i2c 20.1]
-Progress: Parameterizing module i2c_0
 Progress: Adding jtag_uart [altera_avalon_jtag_uart 20.1]
 Progress: Parameterizing module jtag_uart
-Progress: Adding jtag_uart_1 [altera_avalon_jtag_uart 20.1]
-Progress: Parameterizing module jtag_uart_1
-Progress: Adding led_pio [altera_avalon_pio 20.1]
-Progress: Parameterizing module led_pio
 Progress: Adding mm_bridge_0 [altera_avalon_mm_bridge 20.1]
 Progress: Parameterizing module mm_bridge_0
-Progress: Adding nios2_cpu [altera_nios2_gen2 20.1]
-Progress: Parameterizing module nios2_cpu
-Progress: Adding nios_cpu_pio [altera_avalon_pio 20.1]
-Progress: Parameterizing module nios_cpu_pio
-Progress: Adding onchip_memory [altera_avalon_onchip_memory2 20.1]
-Progress: Parameterizing module onchip_memory
 Progress: Adding sensor_pio [altera_avalon_pio 20.1]
 Progress: Parameterizing module sensor_pio
 Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 20.1]
@@ -108,8 +82,6 @@ Info: soc_system.dipsw_pio: PIO inputs are not hardwired in test bench. Undefine
 Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 63
 Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
 Info: soc_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
-Info: soc_system.jtag_uart_1: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
-Info: soc_system.nios_cpu_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: soc_system.sensor_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: soc_system.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
 Info: soc_system.sysid_qsys: Time stamp will be automatically updated when this component is generated.
@@ -127,11 +99,11 @@ Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_002.sender
 Info: ILC: "soc_system" instantiated interrupt_latency_counter "ILC"
 Info: MyPIO_0: "soc_system" instantiated MyPIO "MyPIO_0"
 Info: button_pio: Starting RTL generation for module 'soc_system_button_pio'
-Info: button_pio:   Generation command is [exec /home/strea/intelFPGA/20.1/quartus/linux64/perl/bin/perl -I /home/strea/intelFPGA/20.1/quartus/linux64/perl/lib -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin/europa -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_button_pio --dir=/tmp/alt8795_1933056484604649315.dir/0005_button_pio_gen/ --quartus_dir=/home/strea/intelFPGA/20.1/quartus --verilog --config=/tmp/alt8795_1933056484604649315.dir/0005_button_pio_gen//soc_system_button_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: button_pio:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_button_pio --dir=D:/Users/strea/AppData/Local/Temp/alt8801_8785438163005538355.dir/0004_button_pio_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=D:/Users/strea/AppData/Local/Temp/alt8801_8785438163005538355.dir/0004_button_pio_gen//soc_system_button_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: button_pio: Done RTL generation for module 'soc_system_button_pio'
 Info: button_pio: "soc_system" instantiated altera_avalon_pio "button_pio"
 Info: dipsw_pio: Starting RTL generation for module 'soc_system_dipsw_pio'
-Info: dipsw_pio:   Generation command is [exec /home/strea/intelFPGA/20.1/quartus/linux64/perl/bin/perl -I /home/strea/intelFPGA/20.1/quartus/linux64/perl/lib -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin/europa -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_dipsw_pio --dir=/tmp/alt8795_1933056484604649315.dir/0006_dipsw_pio_gen/ --quartus_dir=/home/strea/intelFPGA/20.1/quartus --verilog --config=/tmp/alt8795_1933056484604649315.dir/0006_dipsw_pio_gen//soc_system_dipsw_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: dipsw_pio:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_dipsw_pio --dir=D:/Users/strea/AppData/Local/Temp/alt8801_8785438163005538355.dir/0005_dipsw_pio_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=D:/Users/strea/AppData/Local/Temp/alt8801_8785438163005538355.dir/0005_dipsw_pio_gen//soc_system_dipsw_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: dipsw_pio: Done RTL generation for module 'soc_system_dipsw_pio'
 Info: dipsw_pio: "soc_system" instantiated altera_avalon_pio "dipsw_pio"
 Info: f2sdram_only_master: "soc_system" instantiated altera_jtag_avalon_master "f2sdram_only_master"
@@ -139,43 +111,18 @@ Info: hps_0: "Running  for module: hps_0"
 Info: hps_0: HPS Main PLL counter settings: n = 0  m = 63
 Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
 Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
-Info: i2c_0: "soc_system" instantiated altera_avalon_i2c "i2c_0"
 Info: jtag_uart: Starting RTL generation for module 'soc_system_jtag_uart'
-Info: jtag_uart:   Generation command is [exec /home/strea/intelFPGA/20.1/quartus/linux64/perl/bin/perl -I /home/strea/intelFPGA/20.1/quartus/linux64/perl/lib -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin/europa -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=/tmp/alt8795_1933056484604649315.dir/0008_jtag_uart_gen/ --quartus_dir=/home/strea/intelFPGA/20.1/quartus --verilog --config=/tmp/alt8795_1933056484604649315.dir/0008_jtag_uart_gen//soc_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=D:/Users/strea/AppData/Local/Temp/alt8801_8785438163005538355.dir/0006_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=D:/Users/strea/AppData/Local/Temp/alt8801_8785438163005538355.dir/0006_jtag_uart_gen//soc_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart: Done RTL generation for module 'soc_system_jtag_uart'
 Info: jtag_uart: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart"
-Info: jtag_uart_1: Starting RTL generation for module 'soc_system_jtag_uart_1'
-Info: jtag_uart_1:   Generation command is [exec /home/strea/intelFPGA/20.1/quartus/linux64/perl/bin/perl -I /home/strea/intelFPGA/20.1/quartus/linux64/perl/lib -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin/europa -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart_1 --dir=/tmp/alt8795_1933056484604649315.dir/0009_jtag_uart_1_gen/ --quartus_dir=/home/strea/intelFPGA/20.1/quartus --verilog --config=/tmp/alt8795_1933056484604649315.dir/0009_jtag_uart_1_gen//soc_system_jtag_uart_1_component_configuration.pl  --do_build_sim=0  ]
-Info: jtag_uart_1: Done RTL generation for module 'soc_system_jtag_uart_1'
-Info: jtag_uart_1: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart_1"
-Info: led_pio: Starting RTL generation for module 'soc_system_led_pio'
-Info: led_pio:   Generation command is [exec /home/strea/intelFPGA/20.1/quartus/linux64/perl/bin/perl -I /home/strea/intelFPGA/20.1/quartus/linux64/perl/lib -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin/europa -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_led_pio --dir=/tmp/alt8795_1933056484604649315.dir/0010_led_pio_gen/ --quartus_dir=/home/strea/intelFPGA/20.1/quartus --verilog --config=/tmp/alt8795_1933056484604649315.dir/0010_led_pio_gen//soc_system_led_pio_component_configuration.pl  --do_build_sim=0  ]
-Info: led_pio: Done RTL generation for module 'soc_system_led_pio'
-Info: led_pio: "soc_system" instantiated altera_avalon_pio "led_pio"
 Info: mm_bridge_0: "soc_system" instantiated altera_avalon_mm_bridge "mm_bridge_0"
-Info: nios2_cpu: "soc_system" instantiated altera_nios2_gen2 "nios2_cpu"
-Info: nios_cpu_pio: Starting RTL generation for module 'soc_system_nios_cpu_pio'
-Info: nios_cpu_pio:   Generation command is [exec /home/strea/intelFPGA/20.1/quartus/linux64/perl/bin/perl -I /home/strea/intelFPGA/20.1/quartus/linux64/perl/lib -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin/europa -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_nios_cpu_pio --dir=/tmp/alt8795_1933056484604649315.dir/0012_nios_cpu_pio_gen/ --quartus_dir=/home/strea/intelFPGA/20.1/quartus --verilog --config=/tmp/alt8795_1933056484604649315.dir/0012_nios_cpu_pio_gen//soc_system_nios_cpu_pio_component_configuration.pl  --do_build_sim=0  ]
-Info: nios_cpu_pio: Done RTL generation for module 'soc_system_nios_cpu_pio'
-Info: nios_cpu_pio: "soc_system" instantiated altera_avalon_pio "nios_cpu_pio"
-Info: onchip_memory: Starting RTL generation for module 'soc_system_onchip_memory'
-Info: onchip_memory:   Generation command is [exec /home/strea/intelFPGA/20.1/quartus/linux64/perl/bin/perl -I /home/strea/intelFPGA/20.1/quartus/linux64/perl/lib -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin/europa -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_onchip_memory --dir=/tmp/alt8795_1933056484604649315.dir/0013_onchip_memory_gen/ --quartus_dir=/home/strea/intelFPGA/20.1/quartus --verilog --config=/tmp/alt8795_1933056484604649315.dir/0013_onchip_memory_gen//soc_system_onchip_memory_component_configuration.pl  --do_build_sim=0  ]
-Info: onchip_memory: Done RTL generation for module 'soc_system_onchip_memory'
-Info: onchip_memory: "soc_system" instantiated altera_avalon_onchip_memory2 "onchip_memory"
 Info: sensor_pio: Starting RTL generation for module 'soc_system_sensor_pio'
-Info: sensor_pio:   Generation command is [exec /home/strea/intelFPGA/20.1/quartus/linux64/perl/bin/perl -I /home/strea/intelFPGA/20.1/quartus/linux64/perl/lib -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin/europa -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/strea/intelFPGA/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_sensor_pio --dir=/tmp/alt8795_1933056484604649315.dir/0014_sensor_pio_gen/ --quartus_dir=/home/strea/intelFPGA/20.1/quartus --verilog --config=/tmp/alt8795_1933056484604649315.dir/0014_sensor_pio_gen//soc_system_sensor_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: sensor_pio:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_sensor_pio --dir=D:/Users/strea/AppData/Local/Temp/alt8801_8785438163005538355.dir/0008_sensor_pio_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=D:/Users/strea/AppData/Local/Temp/alt8801_8785438163005538355.dir/0008_sensor_pio_gen//soc_system_sensor_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: sensor_pio: Done RTL generation for module 'soc_system_sensor_pio'
 Info: sensor_pio: "soc_system" instantiated altera_avalon_pio "sensor_pio"
 Info: sysid_qsys: "soc_system" instantiated altera_avalon_sysid_qsys "sysid_qsys"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
-Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
-Info: mm_interconnect_1: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_1"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
@@ -183,14 +130,13 @@ Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_1"
 Info: mm_interconnect_2: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_2"
-Info: mm_interconnect_3: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_3"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
-Info: mm_interconnect_4: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_4"
+Info: mm_interconnect_3: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_3"
 Info: irq_mapper: "soc_system" instantiated altera_irq_mapper "irq_mapper"
 Info: irq_mapper_001: "soc_system" instantiated altera_irq_mapper "irq_mapper_001"
 Info: irq_mapper_002: "soc_system" instantiated altera_irq_mapper "irq_mapper_002"
-Info: irq_mapper_003: "soc_system" instantiated altera_irq_mapper "irq_mapper_003"
 Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
 Info: jtag_phy_embedded_in_jtag_master: "f2sdram_only_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
 Info: timing_adt: "f2sdram_only_master" instantiated timing_adapter "timing_adt"
@@ -202,86 +148,60 @@ Info: b2p_adapter: "f2sdram_only_master" instantiated channel_adapter "b2p_adapt
 Info: p2b_adapter: "f2sdram_only_master" instantiated channel_adapter "p2b_adapter"
 Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
 Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
-Info: cpu: Starting RTL generation for module 'soc_system_nios2_cpu_cpu'
-Info: cpu:   Generation command is [exec /home/strea/intelFPGA/20.1/quartus/linux64//perl/bin/perl -I /home/strea/intelFPGA/20.1/quartus/linux64//perl/lib -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin/europa -I /home/strea/intelFPGA/20.1/quartus/sopc_builder/bin -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/strea/intelFPGA/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/strea/intelFPGA/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=soc_system_nios2_cpu_cpu --dir=/tmp/alt8795_1933056484604649315.dir/0030_cpu_gen/ --quartus_bindir=/home/strea/intelFPGA/20.1/quartus/linux64/ --verilog --config=/tmp/alt8795_1933056484604649315.dir/0030_cpu_gen//soc_system_nios2_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2021.06.17 17:55:19 (*) Starting Nios II generation
-Info: cpu: # 2021.06.17 17:55:19 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2021.06.17 17:55:19 (*)   Creating all objects for CPU
-Info: cpu: # 2021.06.17 17:55:21 (*)   Generating RTL from CPU objects
-Info: cpu: # 2021.06.17 17:55:21 (*)   Creating plain-text RTL
-Info: cpu: # 2021.06.17 17:55:22 (*) Done Nios II generation
-Info: cpu: Done RTL generation for module 'soc_system_nios2_cpu_cpu'
-Info: cpu: "nios2_cpu" instantiated altera_nios2_gen2_unit "cpu"
-Info: nios2_cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_cpu_data_master_translator"
-Info: jtag_uart_1_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_1_avalon_jtag_slave_translator"
-Info: nios2_cpu_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_cpu_data_master_agent"
-Info: jtag_uart_1_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_1_avalon_jtag_slave_agent"
+Info: mm_bridge_0_s0_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "mm_bridge_0_s0_translator"
+Info: hps_0_h2f_lw_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_lw_axi_master_agent"
+Info: mm_bridge_0_s0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "mm_bridge_0_s0_agent"
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
-Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
-Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: mm_bridge_0_s0_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "mm_bridge_0_s0_burst_adapter"
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
-Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
-Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
-Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
-Info: hps_0_h2f_lw_axi_master_agent: "mm_interconnect_1" instantiated altera_merlin_axi_master_ni "hps_0_h2f_lw_axi_master_agent"
+Info: mm_bridge_0_m0_translator: "mm_interconnect_1" instantiated altera_merlin_master_translator "mm_bridge_0_m0_translator"
+Info: mm_bridge_0_m0_agent: "mm_interconnect_1" instantiated altera_merlin_master_agent "mm_bridge_0_m0_agent"
 Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
 Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
-Info: mm_bridge_0_s0_burst_adapter: "mm_interconnect_1" instantiated altera_merlin_burst_adapter "mm_bridge_0_s0_burst_adapter"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: mm_bridge_0_m0_limiter: "mm_interconnect_1" instantiated altera_merlin_traffic_limiter "mm_bridge_0_m0_limiter"
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: hps_0_f2h_axi_slave_agent: "mm_interconnect_2" instantiated altera_merlin_axi_slave_ni "hps_0_f2h_axi_slave_agent"
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
 Info: router: "mm_interconnect_2" instantiated altera_merlin_router "router"
-Info: router_002: "mm_interconnect_2" instantiated altera_merlin_router "router_002"
-Info: mm_bridge_0_m0_limiter: "mm_interconnect_2" instantiated altera_merlin_traffic_limiter "mm_bridge_0_m0_limiter"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: router_001: "mm_interconnect_2" instantiated altera_merlin_router "router_001"
 Info: cmd_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
-Info: hps_0_f2h_axi_slave_agent: "mm_interconnect_3" instantiated altera_merlin_axi_slave_ni "hps_0_f2h_axi_slave_agent"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: hps_0_f2h_axi_slave_wr_cmd_width_adapter: "mm_interconnect_2" instantiated altera_merlin_width_adapter "hps_0_f2h_axi_slave_wr_cmd_width_adapter"
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 Info: router: "mm_interconnect_3" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_3" instantiated altera_merlin_router "router_001"
 Info: cmd_demux: "mm_interconnect_3" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
-Info: rsp_demux: "mm_interconnect_3" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
-Info: hps_0_f2h_axi_slave_wr_cmd_width_adapter: "mm_interconnect_3" instantiated altera_merlin_width_adapter "hps_0_f2h_axi_slave_wr_cmd_width_adapter"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
-Info: router: "mm_interconnect_4" instantiated altera_merlin_router "router"
-Info: router_001: "mm_interconnect_4" instantiated altera_merlin_router "router_001"
-Info: cmd_demux: "mm_interconnect_4" instantiated altera_merlin_demultiplexer "cmd_demux"
-Info: cmd_mux: "mm_interconnect_4" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
-Info: rsp_mux: "mm_interconnect_4" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
-Info: avalon_st_adapter: "mm_interconnect_4" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: Reusing file D:/Users/strea/Desktop/nyusitsu_fpga/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_3" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: soc_system: Done "soc_system" with 87 modules, 174 files
+Info: soc_system: Done "soc_system" with 66 modules, 134 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis
