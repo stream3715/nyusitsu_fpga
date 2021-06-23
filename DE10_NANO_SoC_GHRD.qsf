@@ -472,13 +472,6 @@ set_global_assignment -name USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ON
 set_global_assignment -name UNIPHY_SEQUENCER_DQS_CONFIG_ENABLE ON
 set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
 set_global_assignment -name ECO_REGENERATE_REPORT ON
-set_global_assignment -name SDC_FILE DE10_NANO_SOC_GHRD.sdc
-set_global_assignment -name VERILOG_FILE ip/intr_capturer/intr_capturer.v
-set_global_assignment -name VERILOG_FILE ip/edge_detect/altera_edge_detector.v
-set_global_assignment -name VERILOG_FILE ip/debounce/debounce.v
-set_global_assignment -name QIP_FILE ip/altsource_probe/hps_reset.qip
-set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
-set_global_assignment -name VHDL_FILE nios_i2c.vhd
 set_location_assignment PIN_AG10 -to SENSOR[1]
 set_location_assignment PIN_AG9 -to SENSOR[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SENSOR[1]
@@ -486,9 +479,21 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SENSOR[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SENSOR
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_I2C[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_I2C[1]
-set_global_assignment -name VERILOG_FILE pwm.v
 set_location_assignment PIN_U14 -to SPEAKER
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SPEAKER
 set_location_assignment PIN_AH9 -to GPIO_I2C[0]
 set_location_assignment PIN_AG11 -to GPIO_I2C[1]
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE i2c_pcf_ctrl.v
+set_global_assignment -name VERILOG_FILE i2c_ap.v
+set_global_assignment -name VERILOG_FILE i2c_m_if.v
+set_global_assignment -name SDC_FILE DE10_NANO_SOC_GHRD.sdc
+set_global_assignment -name VERILOG_FILE ip/intr_capturer/intr_capturer.v
+set_global_assignment -name VERILOG_FILE ip/edge_detect/altera_edge_detector.v
+set_global_assignment -name VERILOG_FILE ip/debounce/debounce.v
+set_global_assignment -name QIP_FILE ip/altsource_probe/hps_reset.qip
+set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
+set_global_assignment -name VHDL_FILE nios_i2c.vhd
+set_global_assignment -name VERILOG_FILE pwm.v

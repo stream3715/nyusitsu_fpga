@@ -1,0 +1,90 @@
+# do DE10_NANO_SoC_GHRD_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/strea/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production/ip/edge_detect {/home/strea/iot/product/production/ip/edge_detect/altera_edge_detector.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:20:50 on Jun 22,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production/ip/edge_detect" /home/strea/iot/product/production/ip/edge_detect/altera_edge_detector.v 
+# -- Compiling module altera_edge_detector
+# 
+# Top level modules:
+# 	altera_edge_detector
+# End time: 21:20:50 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production/ip/debounce {/home/strea/iot/product/production/ip/debounce/debounce.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:20:50 on Jun 22,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production/ip/debounce" /home/strea/iot/product/production/ip/debounce/debounce.v 
+# -- Compiling module debounce
+# 
+# Top level modules:
+# 	debounce
+# End time: 21:20:50 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production/ip/altsource_probe {/home/strea/iot/product/production/ip/altsource_probe/hps_reset.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:20:51 on Jun 22,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production/ip/altsource_probe" /home/strea/iot/product/production/ip/altsource_probe/hps_reset.v 
+# -- Compiling module hps_reset
+# 
+# Top level modules:
+# 	hps_reset
+# End time: 21:20:51 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production {/home/strea/iot/product/production/pwm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:20:51 on Jun 22,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production" /home/strea/iot/product/production/pwm.v 
+# -- Compiling module pwm
+# 
+# Top level modules:
+# 	pwm
+# End time: 21:20:51 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production {/home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:20:51 on Jun 22,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production" /home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v 
+# -- Compiling module DE10_NANO_SoC_GHRD
+# ** Error: (vlog-13069) /home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v(218): near ")": syntax error, unexpected ')', expecting .* or '.'.
+# ** Error (suppressible): /home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v(268): (vlog-2388) 'soundEnable' already declared in this scope (DE10_NANO_SoC_GHRD) at /home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v(200).
+# End time: 21:20:51 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: /home/strea/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./DE10_NANO_SoC_GHRD_run_msim_rtl_verilog.do line 12
+# /home/strea/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production {/home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v}"
+# 
+# stdin: <EOF>
+vsim work.pwm
+# vsim work.pwm 
+# Start time: 21:20:55 on Jun 22,2021
+# Loading work.pwm
+add wave -position end  sim:/pwm/pw
+add wave -position end  sim:/pwm/DIV_tenkilo
+add wave -position end  sim:/pwm/DIV
+add wave -position end  sim:/pwm/pout
+add wave -position end  sim:/pwm/clk
+add wave -position end  sim:/pwm/nreset
+add wave -position end  sim:/pwm/en
+add wave -position end  sim:/pwm/tenkilo
+add wave -position end  sim:/pwm/tenkilodiv
+add wave -position end  sim:/pwm/cnt
+add wave -position end  sim:/pwm/div
+add wave -position end  sim:/pwm/poutreg
+add wave -position insertpoint  \
+sim:/pwm/clk
+force -freeze sim:/pwm/clk 1 0, 0 {50 ps} -r 100
+# Load canceled
+run
+# End time: 21:23:20 on Jun 22,2021, Elapsed time: 0:02:25
+# Errors: 0, Warnings: 0

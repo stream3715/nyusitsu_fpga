@@ -90,7 +90,7 @@ module DE10_NANO_SoC_GHRD(
 	 inout    [ 1: 0]    GPIO_I2C,
 	 
 	 ////////  Speaker  ////////
-	 output             SPEAKER
+	 output              SPEAKER
 	 
 );
 
@@ -267,7 +267,35 @@ defparam pulse_debug_reset.IGNORE_RST_WHILE_BUSY = 1;
 
 wire soundEnable;
 
-// pwm pwm(pout, fpga_clk_50, nreset, soundEnable);
+pwm_module pwm(fpga_clk_50, KEY[1], SPEAKER);
+
+
+wire    sda_i;
+wire    sda_o;
+
+// IO driver      
+assign sda = (sda_o==1'b0)?1'b0:1'bz;
+assign sda_i = sda;
+assign scl = (scl_drv==1'b0)?1'b0:1'bz;
+
+i2c_m_if i2c_m_if(
+  .clk(   fpga_clk_50),
+  .rstb(  KEY[0]),
+  .scl(  GPIO_I2C[1]),
+  .sda_o(  sda_o),
+  .sda_i(  sda_i),
+  .wr(    wr),
+  .rd(    rd),
+  .adr(   adr),
+  .wr_data(wr_data),
+  .wr_bytes(wr_bytes),
+  .rd_data(rd_data),
+  .rd_data_en(rd_data_en),
+  .rd_bytes(rd_bytes),
+  .busy(busy) 
+  );
+
+i2c_pcf_ctrl slave(fpga_clk_50, KEY[0], GPIO_I2C[1], GPIO_I2C[0], );
 
 assign LED[1:0] = SENSOR;
 
