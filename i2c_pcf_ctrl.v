@@ -34,12 +34,11 @@ module i2c_pcf_ctrl (
   wire [3:0]wr_be;
 
   reg init_finished;
-  reg [3:0]init_state;
+  reg [3:0]instruction_state;
   reg [2:0]instruct_count;
 
   reg sending;
-
-  assign led = adr;
+  reg [2:0]four_bit_send_count;
 
 function [7:0] hex2ascii;
   input [3:0] hex_data;
@@ -60,12 +59,16 @@ end
 endtask
 
 task send4bit(
-  input [7:0]inst
+  input [7:0]inst,
+  input [2:0]count
 );
 begin
-  send(inst);
-  wait(busy == 1'b0) #20 send({inst | 8'b00000100});
-  wait(busy == 1'b0) #20 send({inst | 8'b00000000});
+  if(count != 1) begin
+    send(inst);
+  end
+  else begin
+    send(inst | 8'b00000100);
+  end
 end
 endtask
 
@@ -150,7 +153,7 @@ always @ (posedge clk or negedge rstb)
     main_cnt <= 26'b0;
   end
   //else if (main_cnt == 26'd7999999) begin
-  else if (main_cnt == 26'd499999) begin
+  else if (main_cnt == 26'd124999) begin
   //else if (main_cnt ==26'd5000000) begin
     main_cnt <= 26'b0;
     end
@@ -169,11 +172,12 @@ initial begin
   wr_data <=32'h00000000;
   wr_bytes <= 4'd0;
   adr <= 7'h27;
-  init_state <= 4'b0;
+  instruction_state <= 4'b0;
   init_finished <= 0;
   amountbcd <= 12'b0;
   senddec <= 8'b0;
   main_cnt <= 26'b0;
+  four_bit_send_count <= 3'b0;
 end
 
 always @ (posedge clk or negedge rstb)
@@ -183,64 +187,232 @@ always @ (posedge clk or negedge rstb)
     wr_data <=32'h00000000;
     wr_bytes <= 4'd0;
     adr <= 7'b0100111;
-    init_state <= 4'b0;
+    instruction_state <= 4'b0;
     init_finished <= 1'b0;
+    four_bit_send_count <= 3'b0;
   end
   // Initialise
-  else if (main_cnt == 26'd50000 && busy == 1'b0 && sending == 1'b0) begin
+  else if (main_cnt == 26'd10 && busy == 1'b0 && sending == 1'b0) begin
     sending <= 1'b1;
     if (init_finished == 1'b0) begin
-      case (init_state)
+      case (instruction_state)
         // Set 8bit mode
         4'd0: begin
-          send4bit({8'b00110000});
-          instruct_count <= instruct_count + 3'b1;
-          if(instruct_count == 3'd3) init_state <= init_state + 4'b1;
+          send4bit({8'b00110000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruct_count <= instruct_count + 3'b1;
+            if(instruct_count == 3'd3) begin
+              instruction_state <= instruction_state + 4'b1;
+              instruct_count <= 3'b0;
+            end
+          end
         end
-        // Set 4bit mode and more
+
+        // Set 4bit mode
         4'd1: begin
-          // Set 4bit mode
-          send4bit({8'b00100000});
-          // Set 2 lines mode
-          send4bit({8'b00100000});
-          send4bit({8'b10000000});
-          // Set Disp ON, Cursor ON, Blink ON
-          send4bit({8'b00000000});
-          send4bit({8'b11110000});
-          // Disp Clear
-          send4bit({8'b00000000});
-          send4bit({8'b00010000});
-          #2000 wait(busy);
-          // Entry Mode
-          send4bit({8'b00000000});
-          send4bit({8'b01100000});
-          // Go to home position
-          send4bit({8'b00000000});
-          send4bit({8'b00100000});
-          init_finished <= 1'b1;
+          send4bit({8'b00100000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        // Set 2 lines mode 1/2
+        4'd2: begin
+          send4bit({8'b00100000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        // Set 2 lines mode 2/2
+        4'd3: begin
+          send4bit({8'b10000000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        // Set Disp ON, Cursor ON, Blink ON 1/2
+        4'd4: begin
+          send4bit({8'b00000000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        // Set Disp ON, Cursor ON, Blink ON 2/2
+        4'd5: begin
+          send4bit({8'b11110000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        // Disp Clear 1/2
+        4'd6: begin
+          send4bit({8'b00000000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        // Disp Clear 2/2
+        4'd7: begin
+          send4bit({8'b00010000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        // Entry Mode 1/2
+        4'd8: begin
+          send4bit({8'b00000000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        // Entry Mode 2/2
+        4'd9: begin
+          send4bit({8'b01100000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        // Go to home position 1/2
+        4'd10: begin
+          send4bit({8'b00000000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        // Go to home position 2/2
+        4'd11: begin
+          send4bit({8'b00100000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= 4'b0;
+            init_finished <= 1'b1;
+          end
         end
       endcase
     end
     else begin
-      amountbcd = hex2bcd(amount);
+      case (instruction_state)
+        4'd0: begin
+          amountbcd = hex2bcd(amount);
+          senddec = hex2ascii(amountbcd[11:8]);
+          instruction_state <= instruction_state + 3'b1;
+        end
 
-      send4bit({8'b00000000});
-      send4bit({8'b00101000});
+        4'd1: begin
+          send4bit({8'b00001000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
 
-      senddec = hex2ascii(amountbcd[11:8]);
+        4'd2: begin
+          send4bit({8'b00101000}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
 
-      send4bit(((senddec << 4) & 8'hf0) | {8'b00001001});
-      send4bit(((senddec & 8'h0f) << 4) | {8'b00001001});
+        4'd3: begin
+          send4bit((senddec & 8'hf0) | {8'b00001001}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
 
-      senddec = hex2ascii(amountbcd[7:4]);
+        4'd4: begin
+          send4bit(((senddec & 8'h0f) << 4) | {8'b00001001}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
 
-      send4bit(((senddec << 4) & 8'hf0) | {8'b00001001});
-      send4bit(((senddec & 8'h0f) << 4) | {8'b00001001});
+        4'd5: begin
+          senddec = hex2ascii(amountbcd[7:4]);
+          instruction_state <= instruction_state + 3'b1;
+        end
 
-      senddec = hex2ascii(amountbcd[3:0]);
+        4'd6: begin
+          send4bit((senddec & 8'hf0) | {8'b00001001}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
 
-      send4bit(((senddec << 4) & 8'hf0) | {8'b00001001});
-      send4bit(((senddec & 8'h0f) << 4) | {8'b00001001});
+        4'd7: begin
+          send4bit(((senddec & 8'h0f) << 4) | {8'b00001001}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        4'd8: begin
+          senddec = hex2ascii(amountbcd[3:0]);
+          instruction_state <= instruction_state + 3'b1;
+        end
+
+        4'd9: begin
+          send4bit((senddec & 8'hf0) | {8'b00001001}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            instruction_state <= instruction_state + 3'b1;
+          end
+        end
+
+        4'd10: begin
+          send4bit(((senddec & 8'h0f) << 4) | {8'b00001001}, four_bit_send_count);
+          #1 four_bit_send_count <= four_bit_send_count + 3'b1;
+          if(four_bit_send_count == 3) begin
+            four_bit_send_count <= 3'b0;
+            // instruction_state <= 3'b0;
+            instruction_state <= 3'b0;
+          end
+        end
+      endcase
     end
     sending <= 1'b0;
   end
@@ -257,6 +429,9 @@ assign wr_be = (wr_bytes==3'd1)?4'b1000:
                (wr_bytes==3'd2)?4'b1100:
                (wr_bytes==3'd3)?4'b1110:
                (wr_bytes==3'd4)?4'b1111:4'b0000;
+
+
+assign led = {senddec[6:0]};
 
 endmodule
 

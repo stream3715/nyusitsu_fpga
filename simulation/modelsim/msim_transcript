@@ -9,82 +9,1190 @@
 # Copying /home/strea/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production {/home/strea/iot/product/production/i2c_pcf_ctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:55 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production" /home/strea/iot/product/production/i2c_pcf_ctrl.v 
+# -- Compiling module i2c_pcf_ctrl
+# 
+# Top level modules:
+# 	i2c_pcf_ctrl
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production {/home/strea/iot/product/production/i2c_m_if.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:55 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production" /home/strea/iot/product/production/i2c_m_if.v 
+# -- Compiling module i2c_m_if
+# 
+# Top level modules:
+# 	i2c_m_if
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production/ip/edge_detect {/home/strea/iot/product/production/ip/edge_detect/altera_edge_detector.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:20:50 on Jun 22,2021
+# Start time: 14:22:55 on Jun 24,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production/ip/edge_detect" /home/strea/iot/product/production/ip/edge_detect/altera_edge_detector.v 
 # -- Compiling module altera_edge_detector
 # 
 # Top level modules:
 # 	altera_edge_detector
-# End time: 21:20:50 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production/ip/debounce {/home/strea/iot/product/production/ip/debounce/debounce.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:20:50 on Jun 22,2021
+# Start time: 14:22:55 on Jun 24,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production/ip/debounce" /home/strea/iot/product/production/ip/debounce/debounce.v 
 # -- Compiling module debounce
 # 
 # Top level modules:
 # 	debounce
-# End time: 21:20:50 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production/ip/altsource_probe {/home/strea/iot/product/production/ip/altsource_probe/hps_reset.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:20:51 on Jun 22,2021
+# Start time: 14:22:55 on Jun 24,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production/ip/altsource_probe" /home/strea/iot/product/production/ip/altsource_probe/hps_reset.v 
 # -- Compiling module hps_reset
 # 
 # Top level modules:
 # 	hps_reset
-# End time: 21:20:51 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production {/home/strea/iot/product/production/pwm.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:20:51 on Jun 22,2021
+# Start time: 14:22:55 on Jun 24,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production" /home/strea/iot/product/production/pwm.v 
-# -- Compiling module pwm
+# -- Compiling module pwm_module
 # 
 # Top level modules:
-# 	pwm
-# End time: 21:20:51 on Jun 22,2021, Elapsed time: 0:00:00
+# 	pwm_module
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production {/home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v}
+# vlib soc_system
+# ** Warning: (vlib-34) Library already exists at "soc_system".
+# vmap soc_system soc_system
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap soc_system soc_system 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis {/home/strea/iot/product/production/soc_system/synthesis/soc_system.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:20:51 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/strea/iot/product/production" /home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v 
-# -- Compiling module DE10_NANO_SoC_GHRD
-# ** Error: (vlog-13069) /home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v(218): near ")": syntax error, unexpected ')', expecting .* or '.'.
-# ** Error (suppressible): /home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v(268): (vlog-2388) 'soundEnable' already declared in this scope (DE10_NANO_SoC_GHRD) at /home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v(200).
-# End time: 21:20:51 on Jun 22,2021, Elapsed time: 0:00:00
+# Start time: 14:22:55 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis" /home/strea/iot/product/production/soc_system/synthesis/soc_system.v 
+# -- Compiling module soc_system
+# 
+# Top level modules:
+# 	soc_system
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_reset_controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:55 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_reset_controller.v 
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_reset_synchronizer.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:55 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_reset_synchronizer.v 
+# -- Compiling module altera_reset_synchronizer
+# 
+# Top level modules:
+# 	altera_reset_synchronizer
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:55 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3.v 
+# -- Compiling module soc_system_mm_interconnect_3
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_3
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_avalon_st_adapter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:55 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_avalon_st_adapter.v 
+# -- Compiling module soc_system_mm_interconnect_3_avalon_st_adapter
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_3_avalon_st_adapter
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:55 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v 
+# -- Compiling module altera_avalon_sc_fifo
+# 
+# Top level modules:
+# 	altera_avalon_sc_fifo
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:55 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2.v 
+# -- Compiling module soc_system_mm_interconnect_2
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_2
+# End time: 14:22:55 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:55 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1.v 
+# -- Compiling module soc_system_mm_interconnect_1
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_1
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v 
+# -- Compiling module soc_system_mm_interconnect_0_avalon_st_adapter
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_0_avalon_st_adapter
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0.v 
+# -- Compiling module soc_system_mm_interconnect_0
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_0
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_sysid_qsys.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_sysid_qsys.v 
+# -- Compiling module soc_system_sysid_qsys
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_sysid_qsys.v(52): (vlog-2597) '2899645186' is being treated as 32-bit signed integer and will overflow.
+# 
+# Top level modules:
+# 	soc_system_sysid_qsys
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_sensor_pio.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_sensor_pio.v 
+# -- Compiling module soc_system_sensor_pio
+# 
+# Top level modules:
+# 	soc_system_sensor_pio
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_mm_bridge.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_mm_bridge.v 
+# -- Compiling module altera_avalon_mm_bridge
+# 
+# Top level modules:
+# 	altera_avalon_mm_bridge
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_jtag_uart.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_jtag_uart.v 
+# -- Compiling module soc_system_jtag_uart_sim_scfifo_w
+# -- Compiling module soc_system_jtag_uart_scfifo_w
+# -- Compiling module soc_system_jtag_uart_sim_scfifo_r
+# -- Compiling module soc_system_jtag_uart_scfifo_r
+# -- Compiling module soc_system_jtag_uart
+# 
+# Top level modules:
+# 	soc_system_jtag_uart
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_hps_0.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_hps_0.v 
+# -- Compiling module soc_system_hps_0
+# 
+# Top level modules:
+# 	soc_system_hps_0
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_hps_0_hps_io.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_hps_0_hps_io.v 
+# -- Compiling module soc_system_hps_0_hps_io
+# 
+# Top level modules:
+# 	soc_system_hps_0_hps_io
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram.v 
+# -- Compiling module hps_sdram
+# 
+# Top level modules:
+# 	hps_sdram
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v 
+# -- Compiling module altera_mem_if_hhp_qseq_synth_top
+# 
+# Top level modules:
+# 	altera_mem_if_hhp_qseq_synth_top
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v 
+# -- Compiling module hps_sdram_p0_acv_hard_addr_cmd_pads
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_hard_addr_cmd_pads
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v 
+# -- Compiling module hps_sdram_p0_acv_hard_io_pads
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_hard_io_pads
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v 
+# -- Compiling module hps_sdram_p0_acv_hard_memphy
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_hard_memphy
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_acv_ldc.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_acv_ldc.v 
+# -- Compiling module hps_sdram_p0_acv_ldc
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_ldc
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_altdqdqs.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_altdqdqs.v 
+# -- Compiling module hps_sdram_p0_altdqdqs
+# 
+# Top level modules:
+# 	hps_sdram_p0_altdqdqs
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v 
+# -- Compiling module hps_sdram_p0_clock_pair_generator
+# 
+# Top level modules:
+# 	hps_sdram_p0_clock_pair_generator
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_generic_ddio.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0_generic_ddio.v 
+# -- Compiling module hps_sdram_p0_generic_ddio
+# 
+# Top level modules:
+# 	hps_sdram_p0_generic_ddio
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_f2sdram_only_master.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:56 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_f2sdram_only_master.v 
+# -- Compiling module soc_system_f2sdram_only_master
+# 
+# Top level modules:
+# 	soc_system_f2sdram_only_master
+# End time: 14:22:56 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_packets_to_master.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_packets_to_master.v 
+# -- Compiling module altera_avalon_packets_to_master
+# -- Compiling module packets_to_fifo
+# -- Compiling module fifo_buffer_single_clock_fifo
+# -- Compiling module fifo_buffer_scfifo_with_controls
+# -- Compiling module fifo_buffer
+# -- Compiling module fifo_to_packet
+# -- Compiling module packets_to_master
+# 
+# Top level modules:
+# 	altera_avalon_packets_to_master
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_packets_to_bytes.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_packets_to_bytes.v 
+# -- Compiling module altera_avalon_st_packets_to_bytes
+# 
+# Top level modules:
+# 	altera_avalon_st_packets_to_bytes
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_bytes_to_packets.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_bytes_to_packets.v 
+# -- Compiling module altera_avalon_st_bytes_to_packets
+# 
+# Top level modules:
+# 	altera_avalon_st_bytes_to_packets
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_jtag_interface.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_jtag_interface.v 
+# -- Compiling module altera_avalon_st_jtag_interface
+# 
+# Top level modules:
+# 	altera_avalon_st_jtag_interface
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_jtag_dc_streaming.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_jtag_dc_streaming.v 
+# -- Compiling module altera_jtag_control_signal_crosser
+# -- Compiling module altera_jtag_src_crosser
+# -- Compiling module altera_jtag_dc_streaming
+# 
+# Top level modules:
+# 	altera_jtag_dc_streaming
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_jtag_sld_node.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_jtag_sld_node.v 
+# -- Compiling module altera_jtag_sld_node
+# 
+# Top level modules:
+# 	altera_jtag_sld_node
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_jtag_streaming.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_jtag_streaming.v 
+# -- Compiling module altera_jtag_streaming
+# 
+# Top level modules:
+# 	altera_jtag_streaming
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_clock_crosser.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_clock_crosser.v 
+# -- Compiling module altera_avalon_st_clock_crosser
+# 
+# Top level modules:
+# 	altera_avalon_st_clock_crosser
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_std_synchronizer_nocut.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_std_synchronizer_nocut.v 
+# -- Compiling module altera_std_synchronizer_nocut
+# 
+# Top level modules:
+# 	altera_std_synchronizer_nocut
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_idle_remover.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_idle_remover.v 
+# -- Compiling module altera_avalon_st_idle_remover
+# 
+# Top level modules:
+# 	altera_avalon_st_idle_remover
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_idle_inserter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_idle_inserter.v 
+# -- Compiling module altera_avalon_st_idle_inserter
+# 
+# Top level modules:
+# 	altera_avalon_st_idle_inserter
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_dipsw_pio.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_dipsw_pio.v 
+# -- Compiling module soc_system_dipsw_pio
+# 
+# Top level modules:
+# 	soc_system_dipsw_pio
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_button_pio.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_button_pio.v 
+# -- Compiling module soc_system_button_pio
+# 
+# Top level modules:
+# 	soc_system_button_pio
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/MyPIO.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/MyPIO.v 
+# -- Compiling module MyPIO
+# 
+# Top level modules:
+# 	MyPIO
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v 
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(14): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(16): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling module interrupt_latency_counter
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(43): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(46): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(51): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(59): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(90): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(92): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(99): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(136): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(175): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(191): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(203): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(222): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(283): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(303): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(323): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/interrupt_latency_counter.v(326): Carriage return (0x0D) is not followed by a newline (0x0A).
+# 
+# Top level modules:
+# 	interrupt_latency_counter
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 18
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/irq_detector.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/irq_detector.v 
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/irq_detector.v(14): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/irq_detector.v(16): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling module irq_detector
+# 
+# Top level modules:
+# 	irq_detector
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/state_machine_counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/state_machine_counter.v 
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/state_machine_counter.v(14): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/state_machine_counter.v(16): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling module state_machine_counter
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/state_machine_counter.v(53): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/state_machine_counter.v(62): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/state_machine_counter.v(68): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) /home/strea/iot/product/production/soc_system/synthesis/submodules/state_machine_counter.v(94): Carriage return (0x0D) is not followed by a newline (0x0A).
+# 
+# Top level modules:
+# 	state_machine_counter
+# End time: 14:22:57 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 6
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_irq_mapper_002.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:57 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_irq_mapper_002.sv 
+# -- Compiling module soc_system_irq_mapper_002
+# 
+# Top level modules:
+# 	soc_system_irq_mapper_002
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_irq_mapper_001.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_irq_mapper_001.sv 
+# -- Compiling module soc_system_irq_mapper_001
+# 
+# Top level modules:
+# 	soc_system_irq_mapper_001
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_irq_mapper.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_irq_mapper.sv 
+# -- Compiling module soc_system_irq_mapper
+# 
+# Top level modules:
+# 	soc_system_irq_mapper
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_avalon_st_adapter_error_adapter_0.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_avalon_st_adapter_error_adapter_0.sv 
+# -- Compiling module soc_system_mm_interconnect_3_avalon_st_adapter_error_adapter_0
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_3_avalon_st_adapter_error_adapter_0
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_width_adapter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_width_adapter.sv 
+# -- Compiling module altera_merlin_width_adapter
+# 
+# Top level modules:
+# 	altera_merlin_width_adapter
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv 
+# -- Compiling module altera_merlin_address_alignment
+# 
+# Top level modules:
+# 	altera_merlin_address_alignment
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv 
+# -- Compiling module altera_merlin_burst_uncompressor
+# 
+# Top level modules:
+# 	altera_merlin_burst_uncompressor
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_rsp_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_rsp_mux.sv 
+# -- Compiling module soc_system_mm_interconnect_3_rsp_mux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_3_rsp_mux
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_cmd_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_cmd_mux.sv 
+# -- Compiling module soc_system_mm_interconnect_3_cmd_mux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_3_cmd_mux
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_cmd_demux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_cmd_demux.sv 
+# -- Compiling module soc_system_mm_interconnect_3_cmd_demux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_3_cmd_demux
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_router_001.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_router_001.sv 
+# -- Compiling module soc_system_mm_interconnect_3_router_001_default_decode
+# -- Compiling module soc_system_mm_interconnect_3_router_001
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_3_router_001
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_router.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_3_router.sv 
+# -- Compiling module soc_system_mm_interconnect_3_router_default_decode
+# -- Compiling module soc_system_mm_interconnect_3_router
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_3_router
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv 
+# -- Compiling module altera_merlin_slave_agent
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv(618): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv(488): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv(489): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv(490): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv(491): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv(34): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# 
+# Top level modules:
+# 	altera_merlin_slave_agent
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 6
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_master_agent.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_master_agent.sv 
+# -- Compiling module altera_merlin_master_agent
+# 
+# Top level modules:
+# 	altera_merlin_master_agent
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_slave_translator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_slave_translator.sv 
+# -- Compiling module altera_merlin_slave_translator
+# 
+# Top level modules:
+# 	altera_merlin_slave_translator
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_master_translator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_master_translator.sv 
+# -- Compiling module altera_merlin_master_translator
+# 
+# Top level modules:
+# 	altera_merlin_master_translator
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_rsp_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:58 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_rsp_mux.sv 
+# -- Compiling module soc_system_mm_interconnect_2_rsp_mux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_2_rsp_mux
+# End time: 14:22:58 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_rsp_demux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_rsp_demux.sv 
+# -- Compiling module soc_system_mm_interconnect_2_rsp_demux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_2_rsp_demux
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_cmd_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_cmd_mux.sv 
+# -- Compiling module soc_system_mm_interconnect_2_cmd_mux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_2_cmd_mux
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_cmd_demux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_cmd_demux.sv 
+# -- Compiling module soc_system_mm_interconnect_2_cmd_demux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_2_cmd_demux
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv 
+# -- Compiling module altera_merlin_traffic_limiter
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(531): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(602): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(603): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(604): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(605): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(606): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(607): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(612): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(614): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(617): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(618): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(644): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(646): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(647): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(648): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(649): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(650): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(655): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(657): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(660): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv(661): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# 
+# Top level modules:
+# 	altera_merlin_traffic_limiter
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 21
+# vlog -vlog01compat -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -vlog01compat -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v 
+# -- Compiling module altera_avalon_st_pipeline_base
+# 
+# Top level modules:
+# 	altera_avalon_st_pipeline_base
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_router_001.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_router_001.sv 
+# -- Compiling module soc_system_mm_interconnect_2_router_001_default_decode
+# -- Compiling module soc_system_mm_interconnect_2_router_001
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_2_router_001
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_router.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_2_router.sv 
+# -- Compiling module soc_system_mm_interconnect_2_router_default_decode
+# -- Compiling module soc_system_mm_interconnect_2_router
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_2_router
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_slave_ni.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_slave_ni.sv 
+# -- Compiling module altera_merlin_axi_slave_ni
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_slave_ni.sv(848): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_slave_ni.sv(853): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_slave_ni.sv(858): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# 
+# Top level modules:
+# 	altera_merlin_axi_slave_ni
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv 
+# -- Compiling module soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_mux.sv 
+# -- Compiling module soc_system_mm_interconnect_1_rsp_mux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_1_rsp_mux
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_demux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_demux.sv 
+# -- Compiling module soc_system_mm_interconnect_1_rsp_demux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_1_rsp_demux
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_mux.sv 
+# -- Compiling module soc_system_mm_interconnect_1_cmd_mux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_1_cmd_mux
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_demux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_demux.sv 
+# -- Compiling module soc_system_mm_interconnect_1_cmd_demux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_1_cmd_demux
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router_002.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router_002.sv 
+# -- Compiling module soc_system_mm_interconnect_1_router_002_default_decode
+# -- Compiling module soc_system_mm_interconnect_1_router_002
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_1_router_002
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router.sv 
+# -- Compiling module soc_system_mm_interconnect_1_router_default_decode
+# -- Compiling module soc_system_mm_interconnect_1_router
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_1_router
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux.sv 
+# -- Compiling module soc_system_mm_interconnect_0_rsp_mux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_0_rsp_mux
+# End time: 14:22:59 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:22:59 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux.sv 
+# -- Compiling module soc_system_mm_interconnect_0_rsp_demux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_0_rsp_demux
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux.sv 
+# -- Compiling module soc_system_mm_interconnect_0_cmd_mux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_0_cmd_mux
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux.sv 
+# -- Compiling module soc_system_mm_interconnect_0_cmd_demux
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_0_cmd_demux
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_burst_adapter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_burst_adapter.sv 
+# -- Compiling module altera_merlin_burst_adapter
+# 
+# Top level modules:
+# 	altera_merlin_burst_adapter
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv 
+# -- Compiling module altera_merlin_burst_adapter_burstwrap_increment
+# -- Compiling module altera_merlin_burst_adapter_adder
+# -- Compiling module altera_merlin_burst_adapter_subtractor
+# -- Compiling module altera_merlin_burst_adapter_min
+# -- Compiling module altera_merlin_burst_adapter_13_1
+# 
+# Top level modules:
+# 	altera_merlin_burst_adapter_13_1
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_002.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_002.sv 
+# -- Compiling module soc_system_mm_interconnect_0_router_002_default_decode
+# -- Compiling module soc_system_mm_interconnect_0_router_002
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_0_router_002
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router.sv 
+# -- Compiling module soc_system_mm_interconnect_0_router_default_decode
+# -- Compiling module soc_system_mm_interconnect_0_router
+# 
+# Top level modules:
+# 	soc_system_mm_interconnect_0_router
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv 
+# -- Compiling module altera_merlin_axi_master_ni
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv(763): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv(767): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv(701): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv(703): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv(705): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv(707): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv(722): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv(738): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv(740): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv(742): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv(744): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# 
+# Top level modules:
+# 	altera_merlin_axi_master_ni
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 11
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv 
+# -- Compiling module altdq_dqs2_acv_connect_to_hard_phy_cyclonev
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv(199): (vlog-2597) '4294967295' is being treated as 32-bit signed integer and will overflow.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv(2258): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv(2262): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: /home/strea/iot/product/production/soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv(2242): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# 
+# Top level modules:
+# 	altdq_dqs2_acv_connect_to_hard_phy_cyclonev
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_mem_if_dll_cyclonev.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_mem_if_dll_cyclonev.sv 
+# -- Compiling module altera_mem_if_dll_cyclonev
+# 
+# Top level modules:
+# 	altera_mem_if_dll_cyclonev
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv 
+# -- Compiling module altera_mem_if_hard_memory_controller_top_cyclonev
+# 
+# Top level modules:
+# 	altera_mem_if_hard_memory_controller_top_cyclonev
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/altera_mem_if_oct_cyclonev.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/altera_mem_if_oct_cyclonev.sv 
+# -- Compiling module altera_mem_if_oct_cyclonev
+# 
+# Top level modules:
+# 	altera_mem_if_oct_cyclonev
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_p0.sv 
+# -- Compiling module hps_sdram_p0
+# 
+# Top level modules:
+# 	hps_sdram_p0
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_pll.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/hps_sdram_pll.sv 
+# -- Compiling module hps_sdram_pll
+# 
+# Top level modules:
+# 	hps_sdram_pll
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:23:00 on Jun 24,2021
+# vlog -reportprogress 300 -sv -work soc_system "+incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules" /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sv 
+# -- Compiling module soc_system_hps_0_hps_io_border
+# ** Error: /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sv(83): (vlog-2730) Undefined variable: 'intermediate'.
+# ** Error (suppressible): /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sv(109): (vlog-2388) 'intermediate' already declared in this scope (soc_system_hps_0_hps_io_border) at /home/strea/iot/product/production/soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sv(83).
+# End time: 14:23:00 on Jun 24,2021, Elapsed time: 0:00:00
 # Errors: 2, Warnings: 0
 # ** Error: /home/strea/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
-# Error in macro ./DE10_NANO_SoC_GHRD_run_msim_rtl_verilog.do line 12
+# Error in macro ./DE10_NANO_SoC_GHRD_run_msim_rtl_verilog.do line 107
 # /home/strea/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
 #     while executing
-# "vlog -vlog01compat -work work +incdir+/home/strea/iot/product/production {/home/strea/iot/product/production/DE10_NANO_SoC_GHRD.v}"
+# "vlog -sv -work soc_system +incdir+/home/strea/iot/product/production/soc_system/synthesis/submodules {/home/strea/iot/product/production/soc_system/sy..."
 # 
 # stdin: <EOF>
-vsim work.pwm
-# vsim work.pwm 
-# Start time: 21:20:55 on Jun 22,2021
-# Loading work.pwm
-add wave -position end  sim:/pwm/pw
-add wave -position end  sim:/pwm/DIV_tenkilo
-add wave -position end  sim:/pwm/DIV
-add wave -position end  sim:/pwm/pout
-add wave -position end  sim:/pwm/clk
-add wave -position end  sim:/pwm/nreset
-add wave -position end  sim:/pwm/en
-add wave -position end  sim:/pwm/tenkilo
-add wave -position end  sim:/pwm/tenkilodiv
-add wave -position end  sim:/pwm/cnt
-add wave -position end  sim:/pwm/div
-add wave -position end  sim:/pwm/poutreg
-add wave -position insertpoint  \
-sim:/pwm/clk
-force -freeze sim:/pwm/clk 1 0, 0 {50 ps} -r 100
-# Load canceled
+vsim work.i2c_pcf_ctrl
+# vsim work.i2c_pcf_ctrl 
+# Start time: 14:23:11 on Jun 24,2021
+# Loading work.i2c_pcf_ctrl
+add wave -position end  sim:/i2c_pcf_ctrl/clk
+add wave -position end  sim:/i2c_pcf_ctrl/rstb
+add wave -position end  sim:/i2c_pcf_ctrl/led
+add wave -position end  sim:/i2c_pcf_ctrl/wr
+add wave -position end  sim:/i2c_pcf_ctrl/adr
+add wave -position end  sim:/i2c_pcf_ctrl/wr_data
+add wave -position end  sim:/i2c_pcf_ctrl/wr_bytes
+add wave -position end  sim:/i2c_pcf_ctrl/busy
+add wave -position end  sim:/i2c_pcf_ctrl/amount
+add wave -position end  sim:/i2c_pcf_ctrl/main_cnt
+add wave -position end  sim:/i2c_pcf_ctrl/wr_be
+add wave -position end  sim:/i2c_pcf_ctrl/init_finished
+add wave -position end  sim:/i2c_pcf_ctrl/init_state
+add wave -position end  sim:/i2c_pcf_ctrl/instruct_count
+add wave -position end  sim:/i2c_pcf_ctrl/sending
+add wave -position end  sim:/i2c_pcf_ctrl/amountbcd
+add wave -position end  sim:/i2c_pcf_ctrl/senddec
+force -freeze sim:/i2c_pcf_ctrl/clk 1 0, 0 {50000 ps} -r 100000
+wave create -driver freeze -pattern constant -value 1 -starttime 0ps -endtime 1000ps sim:/i2c_pcf_ctrl/rstb
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+change sim:/i2c_pcf_ctrl/wr 0
+change sim:/i2c_pcf_ctrl/adr 0111101
+change sim:/i2c_pcf_ctrl/wr_data 00000000
+change sim:/i2c_pcf_ctrl/wr_bytes 3'b1
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000ps sim:/i2c_pcf_ctrl/busy
+change sim:/i2c_pcf_ctrl/main_cnt 0
+change sim:/i2c_pcf_ctrl/init_finished 0
+change sim:/i2c_pcf_ctrl/init_state 0
+change sim:/i2c_pcf_ctrl/instruct_count 0
+change sim:/i2c_pcf_ctrl/sending 0
+change sim:/i2c_pcf_ctrl/amountbcd 0
+change sim:/i2c_pcf_ctrl/senddec 0
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000ps sim:/i2c_pcf_ctrl/busy
+# /i2c_pcf_ctrl/busy already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+add wave -position end  sim:/i2c_pcf_ctrl/clk
+add wave -position end  sim:/i2c_pcf_ctrl/rstb
+add wave -position end  sim:/i2c_pcf_ctrl/led
+add wave -position end  sim:/i2c_pcf_ctrl/wr
+add wave -position end  sim:/i2c_pcf_ctrl/adr
+add wave -position end  sim:/i2c_pcf_ctrl/wr_data
+add wave -position end  sim:/i2c_pcf_ctrl/wr_bytes
+add wave -position end  sim:/i2c_pcf_ctrl/busy
+add wave -position end  sim:/i2c_pcf_ctrl/amount
+add wave -position end  sim:/i2c_pcf_ctrl/main_cnt
+add wave -position end  sim:/i2c_pcf_ctrl/wr_be
+add wave -position end  sim:/i2c_pcf_ctrl/init_finished
+add wave -position end  sim:/i2c_pcf_ctrl/init_state
+add wave -position end  sim:/i2c_pcf_ctrl/init_state[3]
+add wave -position end  sim:/i2c_pcf_ctrl/init_state[2]
+add wave -position end  sim:/i2c_pcf_ctrl/init_state[1]
+add wave -position end  sim:/i2c_pcf_ctrl/init_state[0]
+add wave -position end  sim:/i2c_pcf_ctrl/instruct_count
+add wave -position end  sim:/i2c_pcf_ctrl/sending
+add wave -position end  sim:/i2c_pcf_ctrl/amountbcd
+add wave -position end  sim:/i2c_pcf_ctrl/senddec
 run
-# End time: 21:23:20 on Jun 22,2021, Elapsed time: 0:02:25
+run
+force -freeze sim:/i2c_pcf_ctrl/clk 1 0, 0 {5 ps} -r 10
+run
+restart -f
+force -freeze sim:/i2c_pcf_ctrl/clk 1 0, 0 {50 ps} -r 100
+wave create -driver freeze -pattern constant -value HiZ -starttime 0ps -endtime 1000ps sim:/i2c_pcf_ctrl/rstb
+run
+change sim:/i2c_pcf_ctrl/main_cnt 49995
+# Invalid binary digit: 4.
+# ** UI-Msg: (vsim-3661) Unable to change '/i2c_pcf_ctrl/main_cnt': Unable to parse value "49995".
+# 
+run
+# End time: 16:19:07 on Jun 24,2021, Elapsed time: 1:55:56
 # Errors: 0, Warnings: 0

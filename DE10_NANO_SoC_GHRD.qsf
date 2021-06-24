@@ -494,8 +494,6 @@ set_location_assignment PIN_AH9 -to GPIO_SDA
 set_location_assignment PIN_AG11 -to GPIO_SCL
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_SCL
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_SDA
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to GPIO_SCL
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to GPIO_SDA
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 set_global_assignment -name SMART_RECOMPILE ON
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
