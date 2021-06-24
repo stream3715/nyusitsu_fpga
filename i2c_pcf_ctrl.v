@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1us / 1ps
 //******************************************************************************
 // File Name            : i2c_lm_ctrl.v
 //------------------------------------------------------------------------------
@@ -11,12 +11,12 @@
 // -.-- 2010/10/09
 //******************************************************************************
 module i2c_pcf_ctrl (
- clk, rstb, led_0, wr, adr, wr_data, wr_bytes, busy, amount
+ clk, rstb, led, wr, adr, wr_data, wr_bytes, busy, amount
 );
 
   input clk;
   input rstb;
-  output led_0;
+  output [6:0]led;
   output wr;
   output [6:0]adr;
   output [31:0]wr_data;
@@ -24,7 +24,7 @@ module i2c_pcf_ctrl (
   input busy;
   input [7:0]amount;
 
-  wire led_0;
+  wire [6:0]led;
   reg  [25:0] main_cnt;
 
   reg wr;
@@ -37,40 +37,35 @@ module i2c_pcf_ctrl (
   reg [3:0]init_state;
   reg [2:0]instruct_count;
 
+  reg sending;
+
+  assign led = adr;
 
 function [7:0] hex2ascii;
   input [3:0] hex_data;
   begin
-      hex2ascii = 8'b00110000 || hex_data;
+      hex2ascii = 8'b00110000 | hex_data;
   end
 endfunction
 
 task send(
-  input [7:0]inst,
-  output wr,
-  output [31:0]wr_data,
-  output [6:0]adr,
-  output [2:0]wr_bytes
+  input [7:0]inst
 );
 begin
   wr <= 1'b1;
-  wr_data[31:28] <= {inst || 8'b00000000};
-  adr <= adr ;
+  wr_data[31:24] <= inst;
+  adr <= 7'b0100111;
   wr_bytes <= 3'd1;
 end
 endtask
 
 task send4bit(
-  input [7:0]inst,
-  output wr,
-  output [31:0]wr_data,
-  output [6:0]adr,
-  output [2:0]wr_bytes
+  input [7:0]inst
 );
 begin
-  send({inst || 8'b00000000}, wr,wr_data, adr,wr_bytes);
-  wait(~busy) #11500 send({inst || 8'b00000100}, wr,wr_data, adr,wr_bytes);
-  wait(~busy) #11500 send({inst || 8'b00000000}, wr,wr_data, adr,wr_bytes);
+  send(inst);
+  wait(busy == 1'b0) #20 send({inst | 8'b00000100});
+  wait(busy == 1'b0) #20 send({inst | 8'b00000000});
 end
 endtask
 
@@ -150,12 +145,12 @@ function [11:0] hex2bcd;
   end
 endfunction
 
-always @ (posedge clk or negedge rstb )
+always @ (posedge clk or negedge rstb)
   if (rstb==1'b0) begin
     main_cnt <= 26'b0;
   end
   //else if (main_cnt == 26'd7999999) begin
-  else if (main_cnt == 26'd49999999) begin
+  else if (main_cnt == 26'd499999) begin
   //else if (main_cnt ==26'd5000000) begin
     main_cnt <= 26'b0;
     end
@@ -163,84 +158,99 @@ always @ (posedge clk or negedge rstb )
     main_cnt <= main_cnt + 26'd1;
   end
 
-assign led_0 = main_cnt[25];
-
 // for PCF8574T controll
 
 reg [11:0] amountbcd;
 reg [7:0] senddec;
 
-always @ (posedge clk or negedge rstb )
+// リセットの生成
+initial begin
+  wr <= 1'b0;
+  wr_data <=32'h00000000;
+  wr_bytes <= 4'd0;
+  adr <= 7'h27;
+  init_state <= 4'b0;
+  init_finished <= 0;
+  amountbcd <= 12'b0;
+  senddec <= 8'b0;
+  main_cnt <= 26'b0;
+end
+
+always @ (posedge clk or negedge rstb)
   // Internal Reset
   if (rstb==1'b0) begin
     wr <= 1'b0;
     wr_data <=32'h00000000;
     wr_bytes <= 4'd0;
-    adr <= 7'h27;
+    adr <= 7'b0100111;
     init_state <= 4'b0;
-    #2500000 init_finished <= 0;
-    end
-  // Initialise
-  else if (init_finished == 0 && busy != 1) begin
-    case (init_state)
-      // Set 8bit mode
-      4'd0: begin
-        send4bit(8'b00110000, wr, wr_data, adr, wr_bytes);
-        if(instruct_count == 4'd3) begin
-          wait(~busy) #7500 init_state = init_state + 4'd1;
-        end else begin
-          wait(~busy) #225000 instruct_count = instruct_count + 4'd1;
-        end
-      end
-      // Set 4bit mode and more
-      4'd1: begin
-        // Set 4bit mode
-        send4bit(8'b00100000, wr, wr_data, adr, wr_bytes);
-        // Set 2 lines mode
-        send4bit(8'b00100000, wr, wr_data, adr, wr_bytes);
-        send4bit(8'b10000000, wr, wr_data, adr, wr_bytes);
-        // Set Disp ON, Cursor ON, Blink ON
-        send4bit(8'b00000000, wr, wr_data, adr, wr_bytes);
-        send4bit(8'b11110000, wr, wr_data, adr, wr_bytes);
-        // Disp Clear
-        send4bit(8'b00000000, wr, wr_data, adr, wr_bytes);
-        send4bit(8'b00010000, wr, wr_data, adr, wr_bytes);
-        #100000 wait(busy);
-        // Entry Mode
-        send4bit(8'b00000000, wr, wr_data, adr, wr_bytes);
-        send4bit(8'b01100000, wr, wr_data, adr, wr_bytes);
-        // Go to home position
-        send4bit(8'b00000000, wr, wr_data, adr, wr_bytes);
-        send4bit(8'b00100000, wr, wr_data, adr, wr_bytes);
-        init_finished <= 1'b1;
-      end
-    endcase
+    init_finished <= 1'b0;
   end
-  else
-    // 人数表示
-    if (main_cnt == 26'd001000)
-      begin
-        amountbcd = hex2bcd(amount);
+  // Initialise
+  else if (main_cnt == 26'd50000 && busy == 1'b0 && sending == 1'b0) begin
+    sending <= 1'b1;
+    if (init_finished == 1'b0) begin
+      case (init_state)
+        // Set 8bit mode
+        4'd0: begin
+          send4bit({8'b00110000});
+          instruct_count <= instruct_count + 3'b1;
+          if(instruct_count == 3'd3) init_state <= init_state + 4'b1;
+        end
+        // Set 4bit mode and more
+        4'd1: begin
+          // Set 4bit mode
+          send4bit({8'b00100000});
+          // Set 2 lines mode
+          send4bit({8'b00100000});
+          send4bit({8'b10000000});
+          // Set Disp ON, Cursor ON, Blink ON
+          send4bit({8'b00000000});
+          send4bit({8'b11110000});
+          // Disp Clear
+          send4bit({8'b00000000});
+          send4bit({8'b00010000});
+          #2000 wait(busy);
+          // Entry Mode
+          send4bit({8'b00000000});
+          send4bit({8'b01100000});
+          // Go to home position
+          send4bit({8'b00000000});
+          send4bit({8'b00100000});
+          init_finished <= 1'b1;
+        end
+      endcase
+    end
+    else begin
+      amountbcd = hex2bcd(amount);
 
-        send4bit(8'b00000000, wr, wr_data, adr, wr_bytes);
-        send4bit(8'b00101000, wr, wr_data, adr, wr_bytes);
+      send4bit({8'b00000000});
+      send4bit({8'b00101000});
 
-        senddec = hex2ascii(amountbcd[11:8]);
+      senddec = hex2ascii(amountbcd[11:8]);
 
-        send4bit(((senddec << 4) & 8'hf0) || 8'b00001001, wr, wr_data, adr, wr_bytes);
-        send4bit(((senddec & 8'h0f) << 4) || 8'b00001001, wr, wr_data, adr, wr_bytes);
+      send4bit(((senddec << 4) & 8'hf0) | {8'b00001001});
+      send4bit(((senddec & 8'h0f) << 4) | {8'b00001001});
 
-        senddec = hex2ascii(amountbcd[7:4]);
+      senddec = hex2ascii(amountbcd[7:4]);
 
-        send4bit(((senddec << 4) & 8'hf0) || 8'b00001001, wr, wr_data, adr, wr_bytes);
-        send4bit(((senddec & 8'h0f) << 4) || 8'b00001001, wr, wr_data, adr, wr_bytes);
+      send4bit(((senddec << 4) & 8'hf0) | {8'b00001001});
+      send4bit(((senddec & 8'h0f) << 4) | {8'b00001001});
 
-        senddec = hex2ascii(amountbcd[3:0]);
+      senddec = hex2ascii(amountbcd[3:0]);
 
-        send4bit(((senddec << 4) & 8'hf0) || 8'b00001001, wr, wr_data, adr, wr_bytes);
-        send4bit(((senddec & 8'h0f) << 4) || 8'b00001001, wr, wr_data, adr, wr_bytes);
+      send4bit(((senddec << 4) & 8'hf0) | {8'b00001001});
+      send4bit(((senddec & 8'h0f) << 4) | {8'b00001001});
+    end
+    sending <= 1'b0;
+  end
+  else begin
+    wr <= 1'b0;
+    wr_data <= wr_data;
+    adr <= adr;
+    wr_bytes <= wr_bytes;
+  end
 
-      end
 
 // wr,rd byte enable
 assign wr_be = (wr_bytes==3'd1)?4'b1000:

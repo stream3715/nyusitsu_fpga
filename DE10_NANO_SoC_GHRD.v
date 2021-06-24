@@ -293,25 +293,32 @@ i2c_m_if i2c_m_if(
   .sda_o(  sda_o),
   .sda_i(  sda_i),
   .wr(    wr),
+  .rd(    rd),
   .adr(   adr),
   .wr_data(wr_data),
   .wr_bytes(wr_bytes),
+  .rd_data(rd_data),
+  .rd_data_en(rd_data_en),
+  .rd_bytes(rd_bytes),
   .busy(busy)
   );
+
+wire iBusy;
 
 i2c_pcf_ctrl slave(
   .clk(   fpga_clk_50),
   .rstb(  KEY[0]),
-  .led_0( LED[0]),
+  .led( LED[7:1]),
   .wr(    wr),
   .adr(   adr),
   .wr_data(wr_data),
   .wr_bytes(wr_bytes),
   .busy(busy),
-  .amount(SW[3:0])
+  .amount(amountexpand)
 );
 
 
 // assign LED[1:0] = SENSOR;
+assign LED[0] = busy;
 
 endmodule
